@@ -25,9 +25,19 @@ h1 {
   display: flex;
   flex-direction: row;
 }
+
 .card {
+  display: flex;
   width: 200px;
   height: 200px;
   background-color: yellowgreen;
   border: 1px solid;
+  /* temporary solution display */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size:100px;
 }

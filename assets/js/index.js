@@ -19,4 +19,17 @@ for (let i = 0; i < 2; i++) {
         }
     }
 }
+
 console.log(field);
+displaySolution(field);
+
+function displaySolution(arr) {
+    // let cards = [[], []];
+    for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 3; j++) {
+            let card = document.querySelector(`#row-${i} #card-${j}`);
+            // cards[i][j] = card;
+            card.innerHTML = `<p>${arr[i][j]}</p>`;
+        }
+    }
+};
