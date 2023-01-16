@@ -11,13 +11,9 @@ function generateField(rows, columns) {
                 ${cardHtml}
                 </div>`;
     }
-    console.log(cardHtml);
-    console.log(html);
     fieldHtml.innerHTML = html;
-    console.log(html)
 }
 
-// there's bug here
 function generateSolution(rows, columns) {
     const field = [];
     for (let i = 0; i < rows; i++) {
@@ -25,10 +21,9 @@ function generateSolution(rows, columns) {
     }
     console.log(field);
     const control_choice = [];
-    for (let i = 0; i < columns; i++) {
+    for (let i = 0; i < rows*columns/2; i++) {
         control_choice.push(0);
     }
-    console.log(control_choice)
     let choice;
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < columns; j++) {
@@ -49,6 +44,7 @@ function generateSolution(rows, columns) {
             }
         }
     }
+    console.log(control_choice)
     return field;
 }
 
@@ -63,7 +59,7 @@ function displaySolution(arr, rows, columns) {
     }
 };
 
-let numberRows = 3;
+let numberRows = 4;
 let numberColumns = 4;
 generateField(numberRows, numberColumns);
 
