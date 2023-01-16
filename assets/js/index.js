@@ -32,10 +32,10 @@ function generateSolution(rows, columns) {
     let choice;
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < columns; j++) {
-            choice = Math.floor(Math.random() * columns);
+            choice = Math.floor(Math.random() * rows*columns/2);
             if (control_choice[choice] === 2) {
                 while(control_choice[choice] === 2) {
-                    choice = Math.floor(Math.random() * columns);
+                    choice = Math.floor(Math.random() * rows * columns/2);
                     if (control_choice[choice] !== 2) {
                         control_choice[choice] += 1;
                         console.log(i,j);
@@ -67,8 +67,8 @@ let numberRows = 3;
 let numberColumns = 4;
 generateField(numberRows, numberColumns);
 
-// let field = generateSolution(numberRows, numberColumns)
+let field = generateSolution(numberRows, numberColumns)
 console.log(field);
-// displaySolution(field, numberRows, numberColumns);
+displaySolution(field, numberRows, numberColumns);
 
 
