@@ -57,7 +57,7 @@ function displaySolution(arr, rows, columns) {
         for (let j = 0; j < columns; j++) {
             let card = document.querySelector(`#card-${i}${j}`);
             // cards[i][j] = card;
-            card.innerHTML = `<p>${arr[i][j]}</p>`;
+            card.innerHTML = `${arr[i][j]}`;
         }
     }
 };
@@ -75,4 +75,16 @@ console.log(field);
 
 displaySolution(field, numberRows, numberColumns);
 
+// verify click on a card
+let cardDivs = document.querySelectorAll('.card');
 
+document.body.addEventListener('click', function(e) {
+	for (let cardDiv of cardDivs) {
+        if(cardDiv.contains(e.target)){
+            console.log(`clicked card'${cardDiv.id}`);
+        } else {
+            console.log('nothing');
+            // hide autocomplete, click was outside container.
+        }    
+    }}
+    );
