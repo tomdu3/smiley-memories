@@ -83,13 +83,16 @@ document.body.addEventListener('click', function(e) {
         console.log(firstCard);
         if(cardDiv.contains(e.target)){
             if (firstCard) {
+                // if first card is the same as the new one, deselect first card
                 if (firstCard === e.target) {
                     firstCard.style.backgroundColor = 'yellowgreen';
                     firstCard = null;
+                // if the value of the second card is the same as of the first one, change colour to orange - correct pair
                 } else if (firstCard.textContent === e.target.textContent) {
                     firstCard.style.backgroundColor = 'orange';
                     e.target.style.backgroundColor = 'orange';
                     firstCard = null;
+                // if the value of the second card is different from the first one - paint red, then return previous colour 
                 } else {
                     firstCard.style.backgroundColor = 'red';
                     e.target.style.backgroundColor = 'red';
@@ -99,6 +102,7 @@ document.body.addEventListener('click', function(e) {
                         firstCard = '';
                     }, 1000);
                 }
+                // if chosen the first card - paint blue
                 } else {
                     firstCard = e.target;
                     firstCard.style.backgroundColor = 'blue';
