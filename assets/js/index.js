@@ -1,3 +1,4 @@
+// generate field of cards of the size rows x columns
 function generateField(rows, columns) {
     let fieldHtml = document.querySelector('.memory-field');
     let html = '';
@@ -14,6 +15,7 @@ function generateField(rows, columns) {
     fieldHtml.innerHTML = html;
 }
 
+// generate solution of the memory game in the 2d matrix of numbers
 function generateSolution(rows, columns) {
     const field = [];
     for (let i = 0; i < rows; i++) {
@@ -48,6 +50,7 @@ function generateSolution(rows, columns) {
     return field;
 }
 
+// display solution of the game - later cards
 function displaySolution(arr, rows, columns) {
     // let cards = [[], []];
     for (let i = 0; i < rows; i++) {
@@ -59,12 +62,17 @@ function displaySolution(arr, rows, columns) {
     }
 };
 
+
+// define size of the field
 let numberRows = 4;
 let numberColumns = 4;
+
+
 generateField(numberRows, numberColumns);
 
 let field = generateSolution(numberRows, numberColumns)
 console.log(field);
+
 displaySolution(field, numberRows, numberColumns);
 
 
