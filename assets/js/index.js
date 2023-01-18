@@ -67,7 +67,6 @@ function displaySolution(arr, rows, columns) {
 let numberRows = 4;
 let numberColumns = 4;
 
-
 generateField(numberRows, numberColumns);
 
 let field = generateSolution(numberRows, numberColumns)
@@ -78,13 +77,35 @@ displaySolution(field, numberRows, numberColumns);
 // verify click on a card
 let cardDivs = document.querySelectorAll('.card');
 
+let firstCard = null;
 document.body.addEventListener('click', function(e) {
 	for (let cardDiv of cardDivs) {
+        console.log(firstCard);
         if(cardDiv.contains(e.target)){
+            if (firstCard) {
+                if (firstCard === e.target) {
+                    firstCard.style.backgroundColor = 'yellowgreen';
+                    firstCard = null;
+                } else if (firstCard.textContent === e.target.textContent) {
+                    firstCard.style.backgroundColor = 'orange';
+                    e.target.style.backgroundColor = 'orange';
+                    firstCard = null;
+                } else {
+                    firstCard.style.backgroundColor = 'red';
+                    e.target.style.backgroundColor = 'red';
+                    setTimeout(() => {
+                        firstCard.style.backgroundColor = 'yellowgreen';
+                        e.target.style.backgroundColor = 'yellowgreen';
+                        firstCard = '';
+                    }, 1000);
+                }
+                } else {
+                    firstCard = e.target;
+                    firstCard.style.backgroundColor = 'blue';
+                    console.log(firstCard);
+            }
             console.log(`clicked card'${cardDiv.id}`);
         } else {
-            console.log('nothing');
-            // hide autocomplete, click was outside container.
         }    
     }}
-    );
+);
