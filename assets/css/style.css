@@ -41,3 +41,24 @@ h1 {
 div .card {
   font-size:100px;
 }
+
+.image-00 {
+  background-image: url('../images/cards/01.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-01 {
+  background-image: url('../images/cards/02.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-02 {
+  background-image: url('../images/cards/03.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

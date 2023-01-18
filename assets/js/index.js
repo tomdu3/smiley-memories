@@ -58,14 +58,15 @@ function displaySolution(arr, rows, columns) {
             let card = document.querySelector(`#card-${i}${j}`);
             // cards[i][j] = card;
             card.innerHTML = `${arr[i][j]}`;
+            card.classList.add(`image-0${arr[i][j]}`);
         }
     }
 };
 
 
 // define size of the field
-let numberRows = 4;
-let numberColumns = 4;
+let numberRows = 3;
+let numberColumns = 2;
 
 generateField(numberRows, numberColumns);
 
@@ -80,7 +81,6 @@ let cardDivs = document.querySelectorAll('.card');
 let firstCard = null;
 document.body.addEventListener('click', function(e) {
 	for (let cardDiv of cardDivs) {
-        console.log(firstCard);
         if(cardDiv.contains(e.target)){
             if (firstCard) {
                 // if first card is the same as the new one, deselect first card
