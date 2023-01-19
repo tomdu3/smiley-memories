@@ -57,16 +57,19 @@ function displaySolution(arr, rows, columns) {
         for (let j = 0; j < columns; j++) {
             let card = document.querySelector(`#card-${i}${j}`);
             // cards[i][j] = card;
-            card.innerHTML = `${arr[i][j]}`;
-            card.classList.add(`image-0${arr[i][j]}`);
+            card.innerHTML = `<p>${arr[i][j]</p>}`;
+            card.classList.add(`image-${arr[i][j]+1}`);
         }
     }
 };
 
+// verify if card already guessed
+
 
 // define size of the field
-let numberRows = 3;
-let numberColumns = 2;
+let numberRows = 4;
+let numberColumns = 4;
+let possibleSolutions; // control array for the solutions
 
 generateField(numberRows, numberColumns);
 
@@ -79,11 +82,15 @@ displaySolution(field, numberRows, numberColumns);
 let cardDivs = document.querySelectorAll('.card');
 
 let firstCard = null;
+possibleSolutions = Array.from(Array(numberRows*numberColumns/2).keys());
 document.body.addEventListener('click', function(e) {
+    if (cardDivs.length === 0 ) {
+        endGame();
+    }
 	for (let cardDiv of cardDivs) {
         if(cardDiv.contains(e.target)){
             if (firstCard) {
-                // if first card is the same as the new one, deselect first card
+                // if first card is the same as one clicked on, deselect first card
                 if (firstCard === e.target) {
                     firstCard.style.backgroundColor = 'yellowgreen';
                     firstCard = null;
@@ -91,6 +98,17 @@ document.body.addEventListener('click', function(e) {
                 } else if (firstCard.textContent === e.target.textContent) {
                     firstCard.style.backgroundColor = 'orange';
                     e.target.style.backgroundColor = 'orange';
+                    // take out the cards that were guessed correctly
+                    let count = 0;
+                    for (let card of cardDivs) {
+                        if card.contains(firstCard.textContent) {
+                            cardDivs.splice(cardDivs.indexOf(card), 1);
+                            count++;
+                            if count === 2 {
+                                break;
+                            }
+                        }
+                    }
                     firstCard = null;
                 // if the value of the second card is different from the first one - paint red, then return previous colour 
                 } else {
@@ -113,3 +131,8 @@ document.body.addEventListener('click', function(e) {
         }    
     }}
 );
+
+function endGame() {
+    console.log('Game over')
+    exit();
+}

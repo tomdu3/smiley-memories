@@ -42,22 +42,70 @@ div .card {
   font-size:100px;
 }
 
-.image-00 {
-  background-image: url('../images/cards/01.png');
+.image-1 {
+  background-image: url('../images/cards/1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.image-01 {
-  background-image: url('../images/cards/02.png');
+.image-2 {
+  background-image: url('../images/cards/2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.image-02 {
-  background-image: url('../images/cards/03.png');
+.image-3 {
+  background-image: url('../images/cards/3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-4 {
+  background-image: url('../images/cards/4.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-5 {
+  background-image: url('../images/cards/5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-6 {
+  background-image: url('../images/cards/6.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-7 {
+  background-image: url('../images/cards/7.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-8 {
+  background-image: url('../images/cards/8.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-9 {
+  background-image: url('../images/cards/9.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-10 {
+  background-image: url('../images/cards/10.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
