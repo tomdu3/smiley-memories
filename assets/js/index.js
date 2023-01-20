@@ -57,7 +57,7 @@ function displaySolution(arr, rows, columns) {
         for (let j = 0; j < columns; j++) {
             let card = document.querySelector(`#card-${i}${j}`);
             // cards[i][j] = card;
-            card.innerHTML = `<p>${arr[i][j]</p>}`;
+            card.innerHTML = `<p style="visibility: hidden;">${arr[i][j]}</p>`;
             card.classList.add(`image-${arr[i][j]+1}`);
         }
     }
@@ -98,17 +98,8 @@ document.body.addEventListener('click', function(e) {
                 } else if (firstCard.textContent === e.target.textContent) {
                     firstCard.style.backgroundColor = 'orange';
                     e.target.style.backgroundColor = 'orange';
-                    // take out the cards that were guessed correctly
-                    let count = 0;
-                    for (let card of cardDivs) {
-                        if card.contains(firstCard.textContent) {
-                            cardDivs.splice(cardDivs.indexOf(card), 1);
-                            count++;
-                            if count === 2 {
-                                break;
-                            }
-                        }
-                    }
+                    // TODO take out the cards that were guessed correctly
+                    
                     firstCard = null;
                 // if the value of the second card is different from the first one - paint red, then return previous colour 
                 } else {
@@ -127,7 +118,6 @@ document.body.addEventListener('click', function(e) {
                     console.log(firstCard);
             }
             console.log(`clicked card'${cardDiv.id}`);
-        } else {
         }    
     }}
 );
