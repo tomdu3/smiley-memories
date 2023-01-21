@@ -79,14 +79,12 @@ console.log(field);
 displaySolution(field, numberRows, numberColumns);
 
 // verify click on a card
-let cardDivs = document.querySelectorAll('.card');
+let cardDivs = [...document.querySelectorAll('.card')];
+console.log(cardDivs);
 
 let firstCard = null;
 possibleSolutions = Array.from(Array(numberRows*numberColumns/2).keys());
 document.body.addEventListener('click', function(e) {
-    if (cardDivs.length === 0 ) {
-        endGame();
-    }
 	for (let cardDiv of cardDivs) {
         if(cardDiv.contains(e.target)){
             if (firstCard) {
@@ -99,7 +97,8 @@ document.body.addEventListener('click', function(e) {
                     firstCard.style.backgroundColor = 'orange';
                     e.target.style.backgroundColor = 'orange';
                     // TODO take out the cards that were guessed correctly
-                    
+                    cardDivs.splice(cardDivs.indexOf(firstCard),1);
+                    cardDivs.splice(cardDivs.indexOf(e.target),1);
                     firstCard = null;
                 // if the value of the second card is different from the first one - paint red, then return previous colour 
                 } else {
@@ -119,7 +118,11 @@ document.body.addEventListener('click', function(e) {
             }
             console.log(`clicked card'${cardDiv.id}`);
         }    
-    }}
+    }
+    if (cardDivs.length === 0 ) {
+        endGame();
+    }
+}
 );
 
 function endGame() {
