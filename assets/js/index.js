@@ -67,8 +67,8 @@ function displaySolution(arr, rows, columns) {
 
 
 // define size of the field
-let numberRows = 4;
-let numberColumns = 4;
+let numberRows = 6;
+let numberColumns = 6;
 let possibleSolutions; // control array for the solutions
 
 generateField(numberRows, numberColumns);

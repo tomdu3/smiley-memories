@@ -42,6 +42,7 @@ div .card {
   font-size:100px;
 }
 
+/* define back images */
 .image-1 {
   background-image: url('../images/cards/1.png');
   background-size: contain;
@@ -106,6 +107,59 @@ div .card {
 
 .image-10 {
   background-image: url('../images/cards/10.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-11 {
+  background-image: url('../images/cards/11.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-12 {
+  background-image: url('../images/cards/12.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-13 {
+  background-image: url('../images/cards/13.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-14 {
+  background-image: url('../images/cards/14.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-15 {
+  background-image: url('../images/cards/15.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-16 {
+  background-image: url('../images/cards/16.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-17 {
+  background-image: url('../images/cards/17.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-18 {
+  background-image: url('../images/cards/18.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
