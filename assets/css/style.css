@@ -38,8 +38,21 @@ h1 {
   align-items: center;
 }
 
-div .card {
-  font-size:100px;
+/* div .card {
+  font-size:1;
+} */
+
+.front, .back {
+  width: 200px;
+  height: 200px;
+}
+
+.front {
+  visibility: visible;
+}
+
+.back {
+  visibility: hidden;
 }
 
 /* define back images */
