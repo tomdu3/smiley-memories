@@ -1,192 +1,201 @@
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body {
-    margin: 25px;
-    background-color: rgb(240,240,240);
-    font-family: arial, sans-serif;
-    font-size: 14px;
-  }
-
-:root {
-  --card-size: 150px;
+  margin: 25px;
+  background-color: rgb(240,240,240);
+  font-family: arial, sans-serif;
+  font-size: 14px;
 }
 
-  /* Applies to all <h1>...</h1> elements. */
+:root {
+--card-size: 150px;
+}
+
+/* Applies to all <h1>...</h1> elements. */
 h1 {
-    font-size: 35px;
-    font-weight: normal;
-    margin-top: 5px;
-  }
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 5px;
+}
 
 .memory-field {
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  width: fit-content;
-  gap: 10px;
+display: flex;
+flex-direction: column;
+background-color: red;
+width: fit-content;
+gap: 10px;
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+display: flex;
+flex-direction: row;
+gap: 10px;
+perspective: 800px;
+
 }
 
 .card {
-  display: flex;
-  width: var(--card-size);
-  height: var(--card-size);
-  background-color: yellowgreen;
-  border: 1px solid;
-  /* temporary solution display */
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+display: flex;
+width: var(--card-size);
+height: var(--card-size);
+background-color: yellowgreen;
+border: 1px solid;
+/* temporary solution display */
+text-align: center;
+justify-content: center;
+align-items: center;
+position: relative;
+transform-style: preserve-3d;
+transition: all 2s ease;
 }
 
 /* div .card {
-  font-size:1;
+font-size:1;
 } */
 
 .front, .back {
-  width: var(--card-size);
-  height: var(--card-size);
+width: var(--card-size);
+height: var(--card-size);
 }
 
 .front {
-  visibility: visible;
+position: absolute;
 }
 
 .back {
-  visibility: hidden;
+position: absolute;
+backface-visibility: hidden;
 }
 
+.toggleCard {
+transform: rotateY(180deg);
+}
 /* define back images */
 .image-1 {
-  background-image: url('../images/cards/1.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/1.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-2 {
-  background-image: url('../images/cards/2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/2.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-3 {
-  background-image: url('../images/cards/3.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/3.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-4 {
-  background-image: url('../images/cards/4.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/4.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-5 {
-  background-image: url('../images/cards/5.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/5.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-6 {
-  background-image: url('../images/cards/6.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/6.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 .image-7 {
-  background-image: url('../images/cards/7.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/7.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-8 {
-  background-image: url('../images/cards/8.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/8.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-9 {
-  background-image: url('../images/cards/9.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/9.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-10 {
-  background-image: url('../images/cards/10.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/10.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-11 {
-  background-image: url('../images/cards/11.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/11.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-12 {
-  background-image: url('../images/cards/12.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/12.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 .image-13 {
-  background-image: url('../images/cards/13.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/13.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 .image-14 {
-  background-image: url('../images/cards/14.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/14.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 .image-15 {
-  background-image: url('../images/cards/15.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/15.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-16 {
-  background-image: url('../images/cards/16.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/16.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-17 {
-  background-image: url('../images/cards/17.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/17.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 .image-18 {
-  background-image: url('../images/cards/18.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+background-image: url('../images/cards/18.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 @media (max-width: 900px) {
-  :root {
-    --card-size: 100px;
-  }
-  
+:root {
+  --card-size: 100px;
+}
+
 }

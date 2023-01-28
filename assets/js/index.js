@@ -62,9 +62,9 @@ function displaySolution(arr, rows, columns) {
       card.dataset.value = `${arr[i][j]}`;
       card.classList.add(`${arr[i][j]}`);
       card.innerHTML = `
-      <div class="back" style="position: relative;" data-value="${arr[i][j]}">
+      <div class="back" data-value="${arr[i][j]}">
       </div>
-      <div class="front" style="position: absolute;" data-value="${arr[i][j]}">
+      <div class="front" data-value="${arr[i][j]}">
       </div>`;
       console.log(card);
       card.children[0].classList.add(`image-${arr[i][j] + 1}`);
@@ -118,10 +118,8 @@ document.body.addEventListener("click", function (e) {
           //   e.target.style.backgroundColor = "red";
           flipCard(cardDiv);
           setTimeout(() => {
-            // firstCard.style.backgroundColor = "yellowgreen";
-            // e.target.style.backgroundColor = "yellowgreen";
-            flipCard(cardDiv);
             flipCard(firstCard);
+            flipCard(cardDiv);
             firstCard = "";
           }, 1000);
         }
@@ -146,8 +144,9 @@ function endGame() {
 
 function flipCard(card) {
   console.log(card);
-  for (child of card.children) {
-    child.classList.toggle("front");
-    child.classList.toggle("back");
-  }
+  card.classList.toggle("toggleCard");
+  //   for (child of card.children) {
+  //     child.classList.toggle("front");
+  //     child.classList.toggle("back");
+  //   }
 }
