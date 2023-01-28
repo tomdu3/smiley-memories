@@ -7,6 +7,10 @@ body {
     font-size: 14px;
   }
 
+:root {
+  --card-size: 150px;
+}
+
   /* Applies to all <h1>...</h1> elements. */
 h1 {
     font-size: 35px;
@@ -19,17 +23,19 @@ h1 {
   flex-direction: column;
   background-color: red;
   width: fit-content;
+  gap: 10px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
 .card {
   display: flex;
-  width: 200px;
-  height: 200px;
+  width: var(--card-size);
+  height: var(--card-size);
   background-color: yellowgreen;
   border: 1px solid;
   /* temporary solution display */
@@ -43,8 +49,8 @@ h1 {
 } */
 
 .front, .back {
-  width: 200px;
-  height: 200px;
+  width: var(--card-size);
+  height: var(--card-size);
 }
 
 .front {
@@ -176,4 +182,11 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --card-size: 100px;
+  }
+  
 }
