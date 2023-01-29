@@ -121,7 +121,7 @@ document.body.addEventListener("click", function (e) {
             flipCard(firstCard);
             flipCard(cardDiv);
             firstCard = "";
-          }, 1000);
+          }, 200);
         }
         // if chosen the first card - paint blue
       } else {
