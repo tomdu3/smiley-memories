@@ -72,10 +72,8 @@ function displaySolution(arr, rows, columns) {
   }
 }
 
-// verify if card already guessed
-
-// define size of the field
-let numberRows = 6;
+// define size of the field - max 6 x 6
+let numberRows = 5;
 let numberColumns = 6;
 let possibleSolutions; // control array for the solutions
 
