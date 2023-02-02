@@ -79,6 +79,7 @@ backface-visibility: hidden;
 .toggleCard {
 transform: rotateY(180deg);
 }
+
 /* define back images */
 .image-1 {
 background-image: url('../images/cards/1.png');
@@ -201,6 +202,39 @@ background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
+
+/* define different backgrounds */
+/* from www.cssmatic.com */
+.sky {
+  background: rgba(212,228,239,1);
+  background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+  background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+}
+
+.rough-paper {
+  background-image: url('../images/img-rough-paper-361x370.png');
+}
+
+/* from http://thepatternlibrary.com/ */
+
+.flags {
+  background-image: url('../images/bunting-flag.png');
+}
+
+.chalkboard {
+  background-image: url('../images/chalkboard.jpg');
+}
+
+.plaid {
+  background-image: url('../images/plaid.jpg');
+}
+
+
 
 @media (max-width: 900px) {
 :root {
