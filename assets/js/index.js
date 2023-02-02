@@ -75,65 +75,69 @@ function displaySolution(arr, rows, columns) {
 // define size of the field - max 6 x 6
 let numberRows = 5;
 let numberColumns = 6;
-let possibleSolutions; // control array for the solutions
 
-generateField(numberRows, numberColumns);
+function gameOn(numberRows, numberColumns) {
+  let possibleSolutions; // control array for the solutions
+  generateField(numberRows, numberColumns);
 
-let field = generateSolution(numberRows, numberColumns);
-console.log(field);
+  let field = generateSolution(numberRows, numberColumns);
+  console.log(field);
 
-displaySolution(field, numberRows, numberColumns);
+  displaySolution(field, numberRows, numberColumns);
 
-// verify click on a card
-let cardDivs = [...document.querySelectorAll(".card")];
-console.log(cardDivs);
+  // verify click on a card
+  let cardDivs = [...document.querySelectorAll(".card")];
+  console.log(cardDivs);
 
-let firstCard = null;
-possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
-document.body.addEventListener("click", function (e) {
-  for (let cardDiv of cardDivs) {
-    // console.log(cardDiv.children);
-    if (cardDiv.contains(e.target)) {
-      console.log(e.target);
-      if (firstCard) {
-        // if first card is the same as one clicked on, deselect first card
-        if (firstCard.contains(e.target)) {
-          flipCard(firstCard);
-          //   firstCard.style.backgroundColor = "yellowgreen";
-          firstCard = null;
-          // if the value of the second card is the same as of the first one, change colour to orange - correct pair
-        } else if (firstCard.dataset.value === e.target.dataset.value) {
-          //   firstCard.style.backgroundColor = "orange";
-          //   e.target.style.backgroundColor = "orange";
-          flipCard(cardDiv);
-          // TODO take out the cards that were guessed correctly
-          cardDivs.splice(cardDivs.indexOf(firstCard), 1);
-          cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
-          firstCard = null;
-          // if the value of the second card is different from the first one - paint red, then return previous colour
-        } else {
-          //   firstCard.style.backgroundColor = "red";
-          //   e.target.style.backgroundColor = "red";
-          flipCard(cardDiv);
-          setTimeout(() => {
+  let firstCard = null;
+  possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
+  document.body.addEventListener("click", function (e) {
+    for (let cardDiv of cardDivs) {
+      // console.log(cardDiv.children);
+      if (cardDiv.contains(e.target)) {
+        console.log(e.target);
+        if (firstCard) {
+          // if first card is the same as one clicked on, deselect first card
+          if (firstCard.contains(e.target)) {
             flipCard(firstCard);
+            //   firstCard.style.backgroundColor = "yellowgreen";
+            firstCard = null;
+            // if the value of the second card is the same as of the first one, change colour to orange - correct pair
+          } else if (firstCard.dataset.value === e.target.dataset.value) {
+            //   firstCard.style.backgroundColor = "orange";
+            //   e.target.style.backgroundColor = "orange";
             flipCard(cardDiv);
-            firstCard = "";
-          }, 200);
+            // TODO take out the cards that were guessed correctly
+            cardDivs.splice(cardDivs.indexOf(firstCard), 1);
+            cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
+            firstCard = null;
+            // if the value of the second card is different from the first one - paint red, then return previous colour
+          } else {
+            //   firstCard.style.backgroundColor = "red";
+            //   e.target.style.backgroundColor = "red";
+            flipCard(cardDiv);
+            setTimeout(() => {
+              flipCard(firstCard);
+              flipCard(cardDiv);
+              firstCard = "";
+            }, 200);
+          }
+          // if chosen the first card - paint blue
+        } else {
+          firstCard = cardDiv;
+          flipCard(firstCard);
+          // firstCard.style.backgroundColor = "blue";
         }
-        // if chosen the first card - paint blue
-      } else {
-        firstCard = cardDiv;
-        flipCard(firstCard);
-        // firstCard.style.backgroundColor = "blue";
+        console.log(`clicked card:${cardDiv.id}`);
       }
-      console.log(`clicked card:${cardDiv.id}`);
     }
-  }
-  if (cardDivs.length === 0) {
-    endGame();
-  }
-});
+    if (cardDivs.length === 0) {
+      endGame();
+    }
+  });
+}
+
+
 
 function endGame() {
   console.log("Game over");
@@ -148,3 +152,5 @@ function flipCard(card) {
   //     child.classList.toggle("back");
   //   }
 }
+
+gameOn(numberRows, numberColumns);
