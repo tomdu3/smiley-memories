@@ -76,6 +76,7 @@ function displaySolution(arr, rows, columns) {
 let numberRows = 5;
 let numberColumns = 6;
 
+// start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
   let possibleSolutions; // control array for the solutions
   generateField(numberRows, numberColumns);
@@ -137,13 +138,13 @@ function gameOn(numberRows, numberColumns) {
   });
 }
 
-
-
+// game over function
 function endGame() {
   console.log("Game over");
   exit();
 }
 
+// flip card function 
 function flipCard(card) {
   console.log(card);
   card.classList.toggle("toggleCard");
@@ -153,4 +154,15 @@ function flipCard(card) {
   //   }
 }
 
+// change background
+let back = document.getElementById('change-background');
+back.onclick = function (e) {
+    let backgroundColour = document.body.style.background;
+    document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
+};
+
+
+
+
+// call to start game
 gameOn(numberRows, numberColumns);
