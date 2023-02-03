@@ -8,8 +8,23 @@
     <title>Smiley's Memories</title>
 </head>
 <body>
-    <header>Navbar</header>
-    <h1>Smiley's Memories</h1>
+    <header>
+        <!-- Code adapted from https://github.com/WebDevSimplified/css-tutorials/tree/master/Responsive%20Navbar -->
+        <nav class="navbar">
+            <div class="logo"><i class="fa-regular fa-face-smile"></i> Smiley's Memories</div>
+            <a href="#" class="hamburger">
+                <span class="hamburger-link"></span>
+                <span class="hamburger-link"></span>
+                <span class="hamburger-link"></span>
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <button class="btn" id="change-background">change background</button>
     <div class="memory-field">
     </div>
