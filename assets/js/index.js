@@ -1,3 +1,8 @@
+// def sound variables
+const flipSound = document.querySelector(`audio[data-sound='flip']`);
+const screamSound = document.querySelector(`audio[data-sound='scream']`);
+const tadaSound = document.querySelector(`audio[data-sound='tada']`);
+
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -100,6 +105,7 @@ function gameOn(numberRows, numberColumns) {
         if (firstCard) {
           // if first card is the same as one clicked on, deselect first card
           if (firstCard.contains(e.target)) {
+            flipSound.play();
             flipCard(firstCard);
             //   firstCard.style.backgroundColor = "yellowgreen";
             firstCard = null;
@@ -107,7 +113,10 @@ function gameOn(numberRows, numberColumns) {
           } else if (firstCard.dataset.value === e.target.dataset.value) {
             //   firstCard.style.backgroundColor = "orange";
             //   e.target.style.backgroundColor = "orange";
+            tadaSound.currentTime = 0;
+            flipSound.play();
             flipCard(cardDiv);
+            tadaSound.play();
             // TODO take out the cards that were guessed correctly
             cardDivs.splice(cardDivs.indexOf(firstCard), 1);
             cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
@@ -116,8 +125,10 @@ function gameOn(numberRows, numberColumns) {
           } else {
             //   firstCard.style.backgroundColor = "red";
             //   e.target.style.backgroundColor = "red";
+            flipSound.play();
             flipCard(cardDiv);
             setTimeout(() => {
+              screamSound.play();
               flipCard(firstCard);
               flipCard(cardDiv);
               firstCard = "";
@@ -126,6 +137,7 @@ function gameOn(numberRows, numberColumns) {
           // if chosen the first card - paint blue
         } else {
           firstCard = cardDiv;
+          flipSound.play();
           flipCard(firstCard);
           // firstCard.style.backgroundColor = "blue";
         }
