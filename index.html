@@ -8,10 +8,64 @@
     <title>Smiley's Memories</title>
 </head>
 <body>
-    <header>Navbar</header>
-    <h1>Smiley's Memories</h1>
+    <header>
+        <!-- Code adapted from https://github.com/WebDevSimplified/css-tutorials/tree/master/Responsive%20Navbar -->
+        <nav class="navbar">
+            <div class="logo"><i class="fa-regular fa-face-smile"></i> Smiley's Memories</div>
+            <a href="#" class="hamburger">
+                <span class="hamburger-link"></span>
+                <span class="hamburger-link"></span>
+                <span class="hamburger-link"></span>
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <fieldset>
+        <legend>Change background:</legend>
+    
+        <div>
+          <input type="radio" id="rough-paper" name="back" value="rough-paper"
+                 checked>
+          <label for="rough-paper">Rough Paper</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="flags" name="back" value="flags">
+          <label for="flags">Flags</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="chalkboard" name="back" value="chalkboard">
+          <label for="chalkboard">Chalkboard</label>
+        </div>
+      <div>
+          <input type="radio" id="plaid" name="back" value="plaid">
+          <label for="plaid">Plaid</label>
+        </div>
+    </fieldset>
+    <button class="btn" id="sound-toggle">Sound: On</button>
     <div class="memory-field">
     </div>
+    <audio data-sound="flip" >
+        <source src="./assets/sounds/flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio data-sound="scream">
+        <source src="./assets/sounds/scream.mp3" type="audio/mpeg">
+    </audio>
+    <audio data-sound="ow" >
+        <source src="./assets/sounds/ow.mp3" type="audio/mpeg">
+    </audio>
+    <audio data-sound="tada" >
+        <source src="./assets/sounds/tada.mp3" type="audio/mpeg">
+    </audio>
+    <audio data-sound="yeah" >
+        <source src="./assets/sounds/yeah.mp3" type="audio/mpeg">
+    </audio>
     <script src="assets/js/index.js"></script>
 </body>
 </html>

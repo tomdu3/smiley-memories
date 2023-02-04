@@ -1,7 +1,12 @@
+* {
+  display: border-box;
+}
+
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body {
   margin: 25px;
+  padding: 0;
   /* background: rgb(250,173,46);
   background: linear-gradient(90deg, rgba(250,173,46,1) 0%, rgba(226,220,200,1) 35%, rgba(197,84,30,1) 100%); */
   background: rgb(32,25,65);
@@ -12,6 +17,60 @@ body {
 
 :root {
 --card-size: 150px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  font-family: Arial;
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.nav-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.nav-links li:hover {
+  background-color: #555;
+}
+
+.hamburger {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger-link {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -79,6 +138,7 @@ backface-visibility: hidden;
 .toggleCard {
 transform: rotateY(180deg);
 }
+
 /* define back images */
 .image-1 {
 background-image: url('../images/cards/1.png');
@@ -202,9 +262,51 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
-@media (max-width: 900px) {
-:root {
-  --card-size: 100px;
+/* define different backgrounds */
+/* from www.cssmatic.com */
+.sky {
+  background: rgba(212,228,239,1);
+  background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+  background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
 }
 
+.rough-paper {
+  background-image: url('../images/img-rough-paper-361x370.png');
+}
+
+/* from http://thepatternlibrary.com/ */
+
+.flags {
+  background-image: url('../images/bunting-flag.png');
+}
+
+.chalkboard {
+  background-image: url('../images/chalkboard.jpg');
+}
+
+.plaid {
+  background-image: url('../images/plaid.jpg');
+}
+
+
+
+@media (max-width: 900px) {
+  :root {
+    --card-size: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none;
+  }
 }

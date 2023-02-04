@@ -1,3 +1,9 @@
+// def sound variables
+const flipSound = document.querySelector(`audio[data-sound='flip']`);
+const screamSound = document.querySelector(`audio[data-sound='scream']`);
+const tadaSound = document.querySelector(`audio[data-sound='tada']`);
+let playSound = true;
+
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -75,71 +81,95 @@ function displaySolution(arr, rows, columns) {
 // define size of the field - max 6 x 6
 let numberRows = 5;
 let numberColumns = 6;
-let possibleSolutions; // control array for the solutions
 
-generateField(numberRows, numberColumns);
+// start a game with the filed size parameters
+function gameOn(numberRows, numberColumns) {
+  let possibleSolutions; // control array for the solutions
+  generateField(numberRows, numberColumns);
 
-let field = generateSolution(numberRows, numberColumns);
-console.log(field);
+  let field = generateSolution(numberRows, numberColumns);
+  console.log(field);
 
-displaySolution(field, numberRows, numberColumns);
+  displaySolution(field, numberRows, numberColumns);
 
-// verify click on a card
-let cardDivs = [...document.querySelectorAll(".card")];
-console.log(cardDivs);
+  // verify click on a card
+  let cardDivs = [...document.querySelectorAll(".card")];
+  console.log(cardDivs);
 
-let firstCard = null;
-possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
-document.body.addEventListener("click", function (e) {
-  for (let cardDiv of cardDivs) {
-    // console.log(cardDiv.children);
-    if (cardDiv.contains(e.target)) {
-      console.log(e.target);
-      if (firstCard) {
-        // if first card is the same as one clicked on, deselect first card
-        if (firstCard.contains(e.target)) {
-          flipCard(firstCard);
-          //   firstCard.style.backgroundColor = "yellowgreen";
-          firstCard = null;
-          // if the value of the second card is the same as of the first one, change colour to orange - correct pair
-        } else if (firstCard.dataset.value === e.target.dataset.value) {
-          //   firstCard.style.backgroundColor = "orange";
-          //   e.target.style.backgroundColor = "orange";
-          flipCard(cardDiv);
-          // TODO take out the cards that were guessed correctly
-          cardDivs.splice(cardDivs.indexOf(firstCard), 1);
-          cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
-          firstCard = null;
-          // if the value of the second card is different from the first one - paint red, then return previous colour
-        } else {
-          //   firstCard.style.backgroundColor = "red";
-          //   e.target.style.backgroundColor = "red";
-          flipCard(cardDiv);
-          setTimeout(() => {
+  let firstCard = null;
+  possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
+  document.body.addEventListener("click", function (e) {
+    for (let cardDiv of cardDivs) {
+      // console.log(cardDiv.children);
+      if (cardDiv.contains(e.target)) {
+        console.log(e.target);
+        if (firstCard) {
+          // if first card is the same as one clicked on, deselect first card
+          if (firstCard.contains(e.target)) {
+            if (playSound) {
+              flipSound.play();
+            }
             flipCard(firstCard);
+            //   firstCard.style.backgroundColor = "yellowgreen";
+            firstCard = null;
+            // if the value of the second card is the same as of the first one, change colour to orange - correct pair
+          } else if (firstCard.dataset.value === e.target.dataset.value) {
+            //   firstCard.style.backgroundColor = "orange";
+            //   e.target.style.backgroundColor = "orange";
+            tadaSound.currentTime = 0;
+            if (playSound) {
+              flipSound.play();
+            }
             flipCard(cardDiv);
-            firstCard = "";
-          }, 200);
+            if (playSound) {
+              tadaSound.play();
+            }
+            // TODO take out the cards that were guessed correctly
+            cardDivs.splice(cardDivs.indexOf(firstCard), 1);
+            cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
+            firstCard = null;
+            // if the value of the second card is different from the first one - paint red, then return previous colour
+          } else {
+            //   firstCard.style.backgroundColor = "red";
+            //   e.target.style.backgroundColor = "red";
+            if (playSound) {
+              flipSound.play();
+            }
+            flipCard(cardDiv);
+            setTimeout(() => {
+              if (playSound) {
+                screamSound.play();
+              }
+              flipCard(firstCard);
+              flipCard(cardDiv);
+              firstCard = "";
+            }, 200);
+          }
+          // if chosen the first card - paint blue
+        } else {
+          firstCard = cardDiv;
+          if (playSound) {
+            flipSound.play();
+          }
+          flipCard(firstCard);
+          // firstCard.style.backgroundColor = "blue";
         }
-        // if chosen the first card - paint blue
-      } else {
-        firstCard = cardDiv;
-        flipCard(firstCard);
-        // firstCard.style.backgroundColor = "blue";
+        console.log(`clicked card:${cardDiv.id}`);
       }
-      console.log(`clicked card:${cardDiv.id}`);
     }
-  }
-  if (cardDivs.length === 0) {
-    endGame();
-  }
-});
+    if (cardDivs.length === 0) {
+      endGame();
+    }
+  });
+}
 
+// game over function
 function endGame() {
   console.log("Game over");
   exit();
 }
 
+// flip card function 
 function flipCard(card) {
   console.log(card);
   card.classList.toggle("toggleCard");
@@ -148,3 +178,33 @@ function flipCard(card) {
   //     child.classList.toggle("back");
   //   }
 }
+
+// change background - old
+// let back = document.getElementById('change-background');
+// back.onclick = function (e) {
+//     let backgroundColour = document.body.style.background;
+//     document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
+// };
+
+// change background
+let radioBtns = document.querySelectorAll('input[name="back"]');
+function findSelected() {
+  let selected = document.querySelector('input[name="back"]:checked').value;
+  document.body.classList = [`${selected}`];
+}
+radioBtns.forEach(radioBtn => {
+  radioBtn.addEventListener('change', findSelected);
+});
+findSelected();
+
+// sound off/on
+let soundButton = document.getElementById('sound-toggle');
+soundButton.onclick = function (e) {
+    playSound = playSound ? false: true;
+    
+    this.innerText = this.innerText === 'Sound: On' ? 'Sound: Off': 'Sound: On';
+};
+
+
+// call to start game
+gameOn(numberRows, numberColumns);
