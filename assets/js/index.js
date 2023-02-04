@@ -3,6 +3,7 @@ const flipSound = document.querySelector(`audio[data-sound='flip']`);
 const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
 let playSound = true;
+
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -178,12 +179,23 @@ function flipCard(card) {
   //   }
 }
 
+// change background - old
+// let back = document.getElementById('change-background');
+// back.onclick = function (e) {
+//     let backgroundColour = document.body.style.background;
+//     document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
+// };
+
 // change background
-let back = document.getElementById('change-background');
-back.onclick = function (e) {
-    let backgroundColour = document.body.style.background;
-    document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
-};
+let radioBtns = document.querySelectorAll('input[name="back"]');
+function findSelected() {
+  let selected = document.querySelector('input[name="back"]:checked').value;
+  document.body.classList = [`${selected}`];
+}
+radioBtns.forEach(radioBtn => {
+  radioBtn.addEventListener('change', findSelected);
+});
+findSelected();
 
 // sound off/on
 let soundButton = document.getElementById('sound-toggle');
