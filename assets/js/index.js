@@ -2,7 +2,7 @@
 const flipSound = document.querySelector(`audio[data-sound='flip']`);
 const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
-
+let playSound = true;
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -105,7 +105,9 @@ function gameOn(numberRows, numberColumns) {
         if (firstCard) {
           // if first card is the same as one clicked on, deselect first card
           if (firstCard.contains(e.target)) {
-            flipSound.play();
+            if (playSound) {
+              flipSound.play();
+            }
             flipCard(firstCard);
             //   firstCard.style.backgroundColor = "yellowgreen";
             firstCard = null;
@@ -114,9 +116,13 @@ function gameOn(numberRows, numberColumns) {
             //   firstCard.style.backgroundColor = "orange";
             //   e.target.style.backgroundColor = "orange";
             tadaSound.currentTime = 0;
-            flipSound.play();
+            if (playSound) {
+              flipSound.play();
+            }
             flipCard(cardDiv);
-            tadaSound.play();
+            if (playSound) {
+              tadaSound.play();
+            }
             // TODO take out the cards that were guessed correctly
             cardDivs.splice(cardDivs.indexOf(firstCard), 1);
             cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
@@ -125,10 +131,14 @@ function gameOn(numberRows, numberColumns) {
           } else {
             //   firstCard.style.backgroundColor = "red";
             //   e.target.style.backgroundColor = "red";
-            flipSound.play();
+            if (playSound) {
+              flipSound.play();
+            }
             flipCard(cardDiv);
             setTimeout(() => {
-              screamSound.play();
+              if (playSound) {
+                screamSound.play();
+              }
               flipCard(firstCard);
               flipCard(cardDiv);
               firstCard = "";
@@ -137,7 +147,9 @@ function gameOn(numberRows, numberColumns) {
           // if chosen the first card - paint blue
         } else {
           firstCard = cardDiv;
-          flipSound.play();
+          if (playSound) {
+            flipSound.play();
+          }
           flipCard(firstCard);
           // firstCard.style.backgroundColor = "blue";
         }
@@ -173,7 +185,13 @@ back.onclick = function (e) {
     document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
 };
 
-
+// sound off/on
+let soundButton = document.getElementById('sound-toggle');
+soundButton.onclick = function (e) {
+    playSound = playSound ? false: true;
+    
+    this.innerText = this.innerText === 'Sound: On' ? 'Sound: Off': 'Sound: On';
+};
 
 
 // call to start game
