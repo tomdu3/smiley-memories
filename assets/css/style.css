@@ -73,7 +73,7 @@ body {
   border-radius: 10px;
 }
 
-i {
+.level i {
   font-size: 1.5rem;
   font-weight: bolder;
   color: black;
@@ -323,7 +323,28 @@ background-position: center;
 }
 
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
 
+footer i {
+  font-size: 2rem;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
 @media (max-width: 900px) {
   :root {
     --card-size: 90px;
