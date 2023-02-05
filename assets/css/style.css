@@ -307,6 +307,7 @@ background-position: center;
 
 .chalkboard {
   background-image: url('../images/chalkboard.jpg');
+  color: white;
 }
 
 .plaid {
