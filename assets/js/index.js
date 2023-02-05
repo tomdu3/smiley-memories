@@ -200,6 +200,13 @@ radioBtns.forEach(radioBtn => {
 });
 findSelected();
 
+// new game and level function
+const newGameBtn = document.getElementById("new-game");
+newGameBtn.onclick = function(e) {
+let radioLevel = document.querySelector('input[name="level"]:checked');
+  console.log(radioLevel.value)
+}
+
 // sound off/on
 let soundButton = document.getElementById('sound-toggle');
 soundButton.onclick = function (e) {
