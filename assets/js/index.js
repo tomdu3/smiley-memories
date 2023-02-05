@@ -204,7 +204,13 @@ findSelected();
 const newGameBtn = document.getElementById("new-game");
 newGameBtn.onclick = function(e) {
 let radioLevel = document.querySelector('input[name="level"]:checked');
-  console.log(radioLevel.value)
+  if (radioLevel.value === 'easy') {
+    gameOn(3,4);
+  } else if (radioLevel.value === 'moderate') {
+    gameOn(4,5);
+  } else {
+    gameOn(5,6);
+  }
 }
 
 // sound off/on
@@ -217,4 +223,4 @@ soundButton.onclick = function (e) {
 
 
 // call to start game
-gameOn(numberRows, numberColumns);
+// gameOn(numberRows, numberColumns);
