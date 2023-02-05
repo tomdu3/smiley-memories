@@ -16,7 +16,7 @@ body {
 }
 
 :root {
---card-size: 150px;
+--card-size: 120px;
 }
 
 /* navbar */
@@ -73,6 +73,13 @@ body {
   border-radius: 10px;
 }
 
+i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: black;
+  -webkit-text-stroke: 1px yellow; /* width and color */
+}
+
 /* Applies to all <h1>...</h1> elements. */
 h1 {
   font-size: 35px;
@@ -92,11 +99,12 @@ h1 {
 }
 
 .level {
-  width: 20rem;
+  width: 35rem;
+  text-align: center;
 }
 
 .back-image {
-  width: 60rem;
+  width: 30rem;
 }
 
 fieldset {
@@ -318,7 +326,17 @@ background-position: center;
 
 @media (max-width: 900px) {
   :root {
-    --card-size: 100px;
+    --card-size: 90px;
+  }
+  level > * {
+    display: flex;
+    flex-direction: column;
+  }
+  i {
+    font-size: 1.2rem;
+  }
+  .level span {
+    visibility: hidden;
   }
 }
 
@@ -330,4 +348,8 @@ background-position: center;
   .nav-links {
       display: none;
   }
+
+:root {
+  --card-size: 50px;
+}
 }
