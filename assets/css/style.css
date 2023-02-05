@@ -80,6 +80,29 @@ h1 {
   margin-top: 5px;
 }
 
+.choice {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.back-image, .level {
+  display: flex;
+  justify-self: space-around;
+}
+
+.level {
+  width: 20rem;
+}
+
+.back-image {
+  width: 60rem;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-around;
+}
 .memory-field {
   margin: 0 auto;
 display: flex;
