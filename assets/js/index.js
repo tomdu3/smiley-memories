@@ -99,6 +99,7 @@ function gameOn(numberRows, numberColumns) {
   let firstCard = null;
   possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
   document.body.addEventListener("click", function (e) {
+    let tempFirstCard, tempCard;
     for (let cardDiv of cardDivs) {
       // console.log(cardDiv.children);
       if (cardDiv.contains(e.target)) {
@@ -136,14 +137,16 @@ function gameOn(numberRows, numberColumns) {
               flipSound.play();
             }
             flipCard(cardDiv);
+            tempCard = cardDiv;
+            tempFirstCard = firstCard;
+            firstCard = "";
             setTimeout(() => {
               if (playSound) {
                 screamSound.play();
               }
-              flipCard(firstCard);
-              flipCard(cardDiv);
-              firstCard = "";
-            }, 200);
+              flipCard(tempFirstCard);
+              flipCard(tempCard);
+            }, 400);
           }
           // if chosen the first card - paint blue
         } else {

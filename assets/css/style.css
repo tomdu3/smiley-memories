@@ -147,19 +147,16 @@ font-size:1;
 .front, .back {
 width: var(--card-size);
 height: var(--card-size);
-}
-
-.front {
-position: absolute;
-}
-
-.back {
 position: absolute;
 backface-visibility: hidden;
 }
 
+.back {
+  transform: rotateY(180deg);
+}
+
 .toggleCard {
-transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 /* define back images */
