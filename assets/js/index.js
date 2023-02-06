@@ -232,6 +232,7 @@ function timer() {
     clearInterval(currentTimeIntervalId);
   }
   let timerElement = document.getElementById('timer');
+  timerElement.style.color = '';
   let startTime = 90; 
   let currentTime = startTime;
 
@@ -247,7 +248,7 @@ function timer() {
     timerElement.textContent = `${minString}:${secString}`;
 
     if (currentTime <= 10) {
-      timerElement.style.color = "red";
+      timerElement.style.color = 'red';
     }
 
     if (currentTime === 0) {
