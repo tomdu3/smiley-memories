@@ -201,7 +201,7 @@ let soundButton = document.getElementById('sound-toggle');
 soundButton.onclick = function (e) {
     playSound = playSound ? false: true;
     
-    this.innerText = this.innerText === 'Sound: On' ? 'Sound: Off': 'Sound: On';
+    this.innerHTML = this.innerHTML === '<i class="fa-solid fa-volume-high"></i>' ? '<i class="fa-solid fa-volume-xmark"></i>': '<i class="fa-solid fa-volume-high"></i>';
 };
 
 

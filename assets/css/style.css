@@ -321,8 +321,17 @@ background-position: center;
 .chalkboard i {
   color: white;
 }
+
+.chalkboard #sound-toggle>i {
+  color: black;
+}
+
 .plaid {
   background-image: url('../images/plaid.jpg');
+}
+
+#sound-toggle {
+  font-size: 2rem;
 }
 
 footer {
