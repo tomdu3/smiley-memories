@@ -49,13 +49,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             </fieldset>
         </div>
     </div>
-    <div class="rules">
+    <div class="rules" style="display: none;">
         <h1>Welcome to Smiley's Memories Game</h1>
-
     </div>
     <div class="memory-field">
     </div>
-    <div class="settings">
     <div class="choice">
         <div class="back-image">
             <fieldset>
@@ -79,7 +77,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                 </div>
             </fieldset>
         </div>
-        <button class="btn" id="sound-toggle">Sound: On</button>
+        <div>
+            <button class="btn" id="sound-toggle">Sound: On</button>
+        </div>
     </div>
     <audio data-sound="flip" >
         <source src="./assets/sounds/flip.mp3" type="audio/mpeg">

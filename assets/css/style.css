@@ -59,6 +59,10 @@ body {
 .timer {
   font-size: 1.2rem;
 }
+
+.game-details {
+  padding: 20px 0;
+}
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -75,7 +79,7 @@ h1 {
 .choice {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  padding: 20px 0;
 }
 
 .back-image, .level {
@@ -114,7 +118,6 @@ display: flex;
 flex-direction: row;
 gap: 10px;
 perspective: 800px;
-
 }
 
 .card {
@@ -313,7 +316,6 @@ background-position: center;
 .plaid {
   background-image: url('../images/plaid.jpg');
 }
-
 
 footer {
   display: flex;
