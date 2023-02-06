@@ -59,7 +59,7 @@ body {
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
-  color: black;
+  color: rgb(245, 113, 52);
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -360,12 +360,33 @@ footer > * {
   :root {
     --card-size: 50px;
   }
+  
   footer {
     margin: 1% 5%;
   }
 
+  .level {
+    font-size: .6rem;
+  }
+
+  .level i {
+    font-size: .8rem;
+  }
+
+  .choice {
+    font-size: .6rem;
+  }
+
   footer span {
     font-size: .8rem;
+  }
+
+  button {
+    font-size: .6rem;
+  }
+
+  .chalkboard .level i {
+    color: white;
   }
 
 }
