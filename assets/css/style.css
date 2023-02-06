@@ -328,23 +328,35 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin: 1% 15%;
 }
 
-footer i {
-  font-size: 2rem;
+footer .social-links i {
+  font-size: 1.5rem;
 }
 
 footer p {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.social-links {
-  width: 30%;
-  display: flex;
-  justify-content: space-evenly;
+footer > * {
+  flex: 1;
 }
+.social-links {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links > * {
+  margin: 0 10px;
+}
+.copyright > * {
+  align-items: baseline;
+}
+
 @media (max-width: 900px) {
   :root {
     --card-size: 90px;
@@ -353,9 +365,11 @@ footer p {
     display: flex;
     flex-direction: column;
   }
-  i {
+  
+  footer .social-links i {
     font-size: 1.2rem;
   }
+  
   .level span {
     visibility: hidden;
   }
