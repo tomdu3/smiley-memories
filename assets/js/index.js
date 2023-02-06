@@ -91,7 +91,7 @@ function gameOn(numberRows, numberColumns) {
   console.log(field);
 
   displaySolution(field, numberRows, numberColumns);
-
+  timer();
   // verify click on a card
   let cardDivs = [...document.querySelectorAll(".card")];
   console.log(cardDivs);
@@ -224,3 +224,41 @@ soundButton.onclick = function (e) {
 
 // call to start game
 // gameOn(numberRows, numberColumns);
+
+//timer function
+function timer() {
+  let timerElement = document.getElementById('timer');
+  let startTime = 90; 
+  let currentTime = startTime;
+
+  // Function to update the timer display
+  function updateTimer() {
+    let min = Math.floor(currentTime / 60);
+    let sec = currentTime % 60;
+    let minString = `${min}`;
+    let secString = `${sec}`;
+    if (sec < 10) {
+      secString = `0${secString}`;
+    }
+    timerElement.textContent = `${minString}:${secString}`;
+
+    if (currentTime <= 10) {
+      timerElement.style.color = "red";
+    }
+
+    if (currentTime === 0) {
+      endGame()
+    }
+
+    currentTime--;
+  }
+
+  // Function to play the sound
+  function playSound() {
+    const sound = new Audio("sound.mp3");
+    sound.play();
+  }
+
+  // Start the timer
+  const timerInterval = setInterval(updateTimer, 1000);
+}

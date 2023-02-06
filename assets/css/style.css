@@ -56,10 +56,13 @@ body {
   background-color: #555;
 }
 
+.timer {
+  font-size: 1.2rem;
+}
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
-  color: rgb(245, 113, 52);
+  color: black;
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -86,6 +89,11 @@ h1 {
 
 .back-image {
   width: 30rem;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-around;
 }
 
 fieldset {
@@ -299,6 +307,9 @@ background-position: center;
   color: white;
 }
 
+.chalkboard i {
+  color: white;
+}
 .plaid {
   background-image: url('../images/plaid.jpg');
 }
@@ -383,10 +394,6 @@ footer > * {
 
   button {
     font-size: .6rem;
-  }
-
-  .chalkboard .level i {
-    color: white;
   }
 
 }
