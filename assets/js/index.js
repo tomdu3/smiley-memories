@@ -2,6 +2,7 @@
 const flipSound = document.querySelector(`audio[data-sound='flip']`);
 const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
+let currentTimeIntervalId;
 let playSound = true;
 
 // generate field of cards of the size rows x columns
@@ -227,6 +228,9 @@ soundButton.onclick = function (e) {
 
 //timer function
 function timer() {
+  if (currentTimeIntervalId) {
+    clearInterval(currentTimeIntervalId);
+  }
   let timerElement = document.getElementById('timer');
   let startTime = 90; 
   let currentTime = startTime;
@@ -253,12 +257,12 @@ function timer() {
     currentTime--;
   }
 
-  // Function to play the sound
-  function playSound() {
-    const sound = new Audio("sound.mp3");
-    sound.play();
-  }
+  // // Function to play the sound
+  // function playSound() {
+  //   const sound = new Audio("sound.mp3");
+  //   sound.play();
+  // }
 
   // Start the timer
-  const timerInterval = setInterval(updateTimer, 1000);
+  currentTimeIntervalId = setInterval(updateTimer, 1000);
 }
