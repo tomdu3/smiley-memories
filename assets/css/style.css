@@ -21,6 +21,7 @@ body {
 
 /* navbar */
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,29 +56,10 @@ body {
   background-color: #555;
 }
 
-.hamburger {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.hamburger-link {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
 .level i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bolder;
   color: black;
-  -webkit-text-stroke: 1px yellow; /* width and color */
 }
 
 /* Applies to all <h1>...</h1> elements. */
@@ -99,7 +81,6 @@ h1 {
 }
 
 .level {
-  width: 35rem;
   text-align: center;
 }
 
@@ -326,7 +307,7 @@ background-position: center;
 footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-center;
   align-items: center;
   font-size: 1rem;
   margin: 1% 15%;
@@ -338,7 +319,7 @@ footer .social-links i {
 
 footer p {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
 }
 
 footer > * {
@@ -358,6 +339,9 @@ footer > * {
 }
 
 @media (max-width: 900px) {
+  .logo {
+    font-size: 1rem;
+  }
   :root {
     --card-size: 90px;
   }
@@ -369,22 +353,19 @@ footer > * {
   footer .social-links i {
     font-size: 1.2rem;
   }
-  
-  .level span {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 600px) {
-  .hamburger {
-      display: flex;
+  
+  :root {
+    --card-size: 50px;
+  }
+  footer {
+    margin: 1% 5%;
   }
 
-  .nav-links {
-      display: none;
+  footer span {
+    font-size: .8rem;
   }
 
-:root {
-  --card-size: 50px;
-}
 }
