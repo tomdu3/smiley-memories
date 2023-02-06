@@ -4,7 +4,9 @@ const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
 let currentTimeIntervalId;
 let playSound = true;
-
+// define size of the field
+let numberRows;
+let numberColumns;
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -79,10 +81,6 @@ function displaySolution(arr, rows, columns) {
   }
 }
 
-// define size of the field - max 6 x 6
-let numberRows = 5;
-let numberColumns = 6;
-
 // start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
   let possibleSolutions; // control array for the solutions
@@ -106,18 +104,15 @@ function gameOn(numberRows, numberColumns) {
       if (cardDiv.contains(e.target)) {
         console.log(e.target);
         if (firstCard) {
-          // if first card is the same as one clicked on, deselect first card
+          // if first card is the same as one clicked on, flip it back
           if (firstCard.contains(e.target)) {
             if (playSound) {
               flipSound.play();
             }
             flipCard(firstCard);
-            //   firstCard.style.backgroundColor = "yellowgreen";
             firstCard = null;
-            // if the value of the second card is the same as of the first one, change colour to orange - correct pair
+            // if the value of the second card is the same as of the first one
           } else if (firstCard.dataset.value === e.target.dataset.value) {
-            //   firstCard.style.backgroundColor = "orange";
-            //   e.target.style.backgroundColor = "orange";
             tadaSound.currentTime = 0;
             if (playSound) {
               flipSound.play();
@@ -126,14 +121,12 @@ function gameOn(numberRows, numberColumns) {
             if (playSound) {
               tadaSound.play();
             }
-            // TODO take out the cards that were guessed correctly
+            // take out the cards that were guessed correctly
             cardDivs.splice(cardDivs.indexOf(firstCard), 1);
             cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
             firstCard = null;
-            // if the value of the second card is different from the first one - paint red, then return previous colour
+            // if the value of the second card is different from the first one - flip them both back and play a sound
           } else {
-            //   firstCard.style.backgroundColor = "red";
-            //   e.target.style.backgroundColor = "red";
             if (playSound) {
               flipSound.play();
             }
@@ -149,14 +142,13 @@ function gameOn(numberRows, numberColumns) {
               flipCard(tempCard);
             }, 400);
           }
-          // if chosen the first card - paint blue
+          // if chosen the first card - flip
         } else {
           firstCard = cardDiv;
           if (playSound) {
             flipSound.play();
           }
           flipCard(firstCard);
-          // firstCard.style.backgroundColor = "blue";
         }
         console.log(`clicked card:${cardDiv.id}`);
       }
@@ -177,18 +169,8 @@ function endGame() {
 function flipCard(card) {
   console.log(card);
   card.classList.toggle("toggleCard");
-  //   for (child of card.children) {
-  //     child.classList.toggle("front");
-  //     child.classList.toggle("back");
-  //   }
 }
 
-// change background - old
-// let back = document.getElementById('change-background');
-// back.onclick = function (e) {
-//     let backgroundColour = document.body.style.background;
-//     document.body.style.background = backgroundColour === 'red' ? 'white': 'red';
-// };
 
 // change background
 let radioBtns = document.querySelectorAll('input[name="back"]');
