@@ -86,6 +86,10 @@ h1 {
   padding: 20px 0;
 }
 
+input[type='radio'] {
+  cursor: pointer;
+}
+
 .back-image, .level {
   display: flex;
   justify-self: space-around;
