@@ -1,7 +1,9 @@
 * {
   display: border-box;
 }
-
+html, body {
+  height: 100%;
+}
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
 body {
@@ -335,12 +337,14 @@ background-position: center;
 }
 
 footer {
+  bottom: 0;
+  position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: space-center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1rem;
-  margin: 1% 15%;
+  width: 80%;
 }
 
 footer .social-links i {
@@ -355,6 +359,7 @@ footer p {
 footer > * {
   flex: 1;
 }
+
 .social-links {
   width: 10%;
   display: flex;
@@ -389,10 +394,6 @@ footer > * {
   
   :root {
     --card-size: 50px;
-  }
-  
-  footer {
-    margin: 1% 5%;
   }
 
   .level {
