@@ -4,6 +4,7 @@ const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
 let currentTimeIntervalId;
 let playSound = true;
+let startTime; 
 // define size of the field
 let numberRows;
 let numberColumns;
@@ -188,10 +189,13 @@ const newGameBtn = document.getElementById("new-game");
 newGameBtn.onclick = function(e) {
 let radioLevel = document.querySelector('input[name="level"]:checked');
   if (radioLevel.value === 'easy') {
+    startTime = 30; 
     gameOn(3,4);
   } else if (radioLevel.value === 'moderate') {
+    startTime = 60; 
     gameOn(4,5);
   } else {
+    startTime = 90; 
     gameOn(5,6);
   }
 }
@@ -213,17 +217,22 @@ soundButton.onclick = function (e) {
 // gameOn(numberRows, numberColumns);
 
 //timer function
+let timerOn = true;
+
 function timer() {
+  // restart timer
   if (currentTimeIntervalId) {
     clearInterval(currentTimeIntervalId);
   }
   let timerElement = document.getElementById('timer');
   timerElement.style.color = '';
-  let startTime = 90; 
   let currentTime = startTime;
 
   // Function to update the timer display
   function updateTimer() {
+    if (!timerOn) {
+      return;
+    }
     let min = Math.floor(currentTime / 60);
     let sec = currentTime % 60;
     let minString = `${min}`;
@@ -238,32 +247,37 @@ function timer() {
     }
 
     if (currentTime === 0) {
-      endGame()
+      endGame();
     }
 
     currentTime--;
   }
-
-  // // Function to play the sound
-  // function playSound() {
-  //   const sound = new Audio("sound.mp3");
-  //   sound.play();
-  // }
-
+  
   // Start the timer
   currentTimeIntervalId = setInterval(updateTimer, 1000);
+}
+
+function pauseTimer() {
+  timerOn = false;
+}
+
+function resumeTimer() {
+  timerOn = true;
 }
 
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector("#rules");
 const closeModal = document.querySelector("#close-button");
 
+// modal functions - timer paused when opened
 openModal.addEventListener("click", () => {
   modal.showModal();
+  pauseTimer();
 });
 
 closeModal.addEventListener("click", () => {
   modal.close();
+  resumeTimer();
 });
 
 window.onload = function() {
