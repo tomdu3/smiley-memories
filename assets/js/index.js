@@ -196,6 +196,10 @@ let radioLevel = document.querySelector('input[name="level"]:checked');
   }
 }
 
+// display game field on first run
+
+generateField(4, 5);
+
 // sound off/on
 let soundButton = document.getElementById('sound-toggle');
 soundButton.onclick = function (e) {
