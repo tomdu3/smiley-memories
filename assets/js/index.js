@@ -253,3 +253,19 @@ function timer() {
   // Start the timer
   currentTimeIntervalId = setInterval(updateTimer, 1000);
 }
+
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector("#rules");
+const closeModal = document.querySelector("#close-button");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
+
+window.onload = function() {
+  document.getElementById("modal").showModal();
+};
