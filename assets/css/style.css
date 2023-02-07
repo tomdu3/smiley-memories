@@ -338,13 +338,14 @@ background-position: center;
 
 footer {
   bottom: 0;
+  right: 0;
   position: absolute;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-size: 1rem;
-  width: 80%;
+  width: 100%;
 }
 
 footer .social-links i {
