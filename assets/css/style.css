@@ -336,6 +336,17 @@ background-position: center;
   font-size: 2rem;
 }
 
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: red;
+  width: 20%;
+  padding: 20px;
+}
+
 footer {
   bottom: 0;
   right: 0;

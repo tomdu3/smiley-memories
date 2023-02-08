@@ -5,6 +5,7 @@ const tadaSound = document.querySelector(`audio[data-sound='tada']`);
 let currentTimeIntervalId;
 let playSound = true;
 let startTime; 
+
 // define size of the field
 let numberRows;
 let numberColumns;
@@ -86,7 +87,9 @@ function displaySolution(arr, rows, columns) {
 function gameOn(numberRows, numberColumns) {
   let possibleSolutions; // control array for the solutions
   generateField(numberRows, numberColumns);
-
+  timerOn = true;
+  document.querySelector("#game-over").innerHTML = '';
+  document.querySelector("#game-over").style.display = 'none';
   let field = generateSolution(numberRows, numberColumns);
   console.log(field);
 
@@ -156,6 +159,8 @@ function gameOn(numberRows, numberColumns) {
     }
     if (cardDivs.length === 0) {
       endGame();
+      timerOn = false;
+      return;
     }
   });
 }
@@ -163,7 +168,10 @@ function gameOn(numberRows, numberColumns) {
 // game over function
 function endGame() {
   console.log("Game over");
-  exit();
+  let gameOver = document.querySelector("#game-over");
+  gameOver.innerHTML = `
+  <h1>Game Over</h1>`
+  gameOver.style.display="unset";
 }
 
 // flip card function 
@@ -221,6 +229,7 @@ let timerOn = true;
 
 function timer() {
   // restart timer
+  
   if (currentTimeIntervalId) {
     clearInterval(currentTimeIntervalId);
   }
@@ -248,6 +257,8 @@ function timer() {
 
     if (currentTime === 0) {
       endGame();
+      timerOn = false;
+      return;
     }
 
     currentTime--;
