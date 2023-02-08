@@ -4,7 +4,10 @@ const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
 let currentTimeIntervalId;
 let playSound = true;
-let startTime; 
+let startTime;
+let possibleSolutions; // control array for the solutions
+let timerOn = true;
+
 
 // define size of the field
 let numberRows;
@@ -85,7 +88,6 @@ function displaySolution(arr, rows, columns) {
 
 // start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
-  let possibleSolutions; // control array for the solutions
   generateField(numberRows, numberColumns);
   timerOn = true;
   document.querySelector("#game-over").innerHTML = '';
@@ -100,7 +102,7 @@ function gameOn(numberRows, numberColumns) {
   console.log(cardDivs);
 
   let firstCard = null;
-  possibleSolutions = Array.from(Array((numberRows * numberColumns) / 2).keys());
+  possibleSolutions = (numberRows * numberColumns) / 2;
   document.body.addEventListener("click", function (e) {
     let tempFirstCard, tempCard;
     for (let cardDiv of cardDivs) {
@@ -129,6 +131,7 @@ function gameOn(numberRows, numberColumns) {
             cardDivs.splice(cardDivs.indexOf(firstCard), 1);
             cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
             firstCard = null;
+            possibleSolutions--;
             // if the value of the second card is different from the first one - flip them both back and play a sound
           } else {
             if (playSound) {
@@ -157,7 +160,8 @@ function gameOn(numberRows, numberColumns) {
         console.log(`clicked card:${cardDiv.id}`);
       }
     }
-    if (cardDivs.length === 0) {
+    console.log(possibleSolutions);
+    if (possibleSolutions === 0) {
       endGame();
       timerOn = false;
       return;
@@ -225,8 +229,6 @@ soundButton.onclick = function (e) {
 // gameOn(numberRows, numberColumns);
 
 //timer function
-let timerOn = true;
-
 function timer() {
   // restart timer
   
