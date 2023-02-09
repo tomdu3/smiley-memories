@@ -44,7 +44,6 @@ body {
 }
 
 button {
-  cursor: pointer;
   font-family: 'Oxygen', sans-serif;
   font-weight: 500;
   color: #fff;
@@ -55,13 +54,10 @@ button {
   border-radius: 14px;
   /* font-weight: bold;
   font-size: 16px; */
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
   cursor: pointer;
 }
 
@@ -71,7 +67,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: var(--purple-blue); */
   background: rgb(32,25,65);
   background: linear-gradient(90deg, rgba(32,25,65,1) 0%, rgba(23,239,189,1) 49%, rgba(32,25,65,1) 100%);
   color: var(--font-navbar);
@@ -126,6 +121,18 @@ button {
   color: var(--font-navbar) !important;
 }
 
+fieldset {
+  border-radius: 25px;
+}
+
+legend {
+  text-align: center;
+  background: linear-gradient(105deg, var(--yellow-orange), var(--red-orange));
+  padding: 4px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 20%);
+}
+
 .game-details {
   padding: 20px 0;
 }
@@ -133,10 +140,16 @@ button {
 .timer {
   font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
-  background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
+  background: linear-gradient(342deg, var(--yellow-orange), var(--red-orange));
   border-radius: 25px;
   padding: 0 10px;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  margin: auto 0;
+  padding: 5px 10px;
+}
+
+.timer p {
+  margin: auto 0;
 }
 
 .level i {
@@ -153,7 +166,7 @@ h1 {
 
 .choice {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px 0;
 }
 
@@ -164,10 +177,6 @@ input[type='radio'] {
 .back-image, .level {
   display: flex;
   justify-self: space-around;
-  background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
-  border-radius: 25px;
-  padding: 10px;
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .level {
@@ -175,7 +184,7 @@ input[type='radio'] {
 }
 
 .back-image {
-  width: 30rem;
+  width: auto;
 }
 
 .game-details {
@@ -186,7 +195,12 @@ input[type='radio'] {
 fieldset {
   display: flex;
   justify-content: space-around;
+  background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
+
 .memory-field {
   margin: 0 auto;
 display: flex;
