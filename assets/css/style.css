@@ -9,6 +9,7 @@ html, body {
 }
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors). */
+
 body {
   margin: 25px;
   padding: 0;
@@ -46,6 +47,22 @@ button {
   cursor: pointer;
   font-family: 'Oxygen', sans-serif;
   font-weight: 500;
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #38D2D2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  /* font-weight: bold;
+  font-size: 16px; */
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
 }
 
 /* navbar */
@@ -109,14 +126,19 @@ button {
   color: var(--font-navbar) !important;
 }
 
-.timer {
-  font-family: 'Oxygen', sans-serif;
-  font-size: 1.2rem;
-}
-
 .game-details {
   padding: 20px 0;
 }
+
+.timer {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
+  border-radius: 25px;
+  padding: 0 10px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -142,6 +164,10 @@ input[type='radio'] {
 .back-image, .level {
   display: flex;
   justify-self: space-around;
+  background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .level {
@@ -372,11 +398,15 @@ background-position: center;
 }
 
 .chalkboard #sound-toggle>i {
-  color: black;
+  color: white;
 }
 
 .chalkboard .navbar {
   border: 1px white;
+}
+
+.chalkboard .timer {
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
 }
 .plaid {
   background-image: url('../images/plaid.jpg');
