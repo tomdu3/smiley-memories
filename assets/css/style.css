@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Oxygen&family=Raleway+Dots&display=swap');
+
+
 * {
   display: border-box;
 }
@@ -13,8 +16,7 @@ body {
   background: linear-gradient(90deg, rgba(250,173,46,1) 0%, rgba(226,220,200,1) 35%, rgba(197,84,30,1) 100%); */
   background: rgb(32,25,65);
   background: radial-gradient(circle, rgba(32,25,65,0.500437675070028) 1%, rgba(226,220,200,1) 30%);
-  font-family: arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Oxygen', sans-serif;  font-size: 14px;
 }
 
 :root {
@@ -42,6 +44,8 @@ body {
 
 button {
   cursor: pointer;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 500;
 }
 
 /* navbar */
@@ -58,8 +62,10 @@ button {
 }
 
 .logo {
-  font-family: Arial;
+  font-family: 'Raleway Dots', cursive;
   font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
   margin: .5rem;
   color: white;
 }
@@ -75,6 +81,8 @@ button {
 }
 
 .nav-links a {
+  font-weight: 600;
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--font-navbar);
   padding: 1rem;
@@ -83,15 +91,17 @@ button {
 
 .active {
   background-color: var(--sand);
+  opacity: 0.7;
   border-radius: 12px;
 } 
 
 .active a {
-    color: var(--purple-blue);
+  color: var(--purple-blue);
 }
 
 .nav-links li:hover {
   background-color: var(--red-orange);
+  opacity: 1;
   border-radius: 12px;
 }
 
@@ -100,6 +110,7 @@ button {
 }
 
 .timer {
+  font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
 }
 
