@@ -19,13 +19,25 @@ body {
 
 :root {
 --card-size: 120px;
-/* colour scheme */
---purple-blue: #201941;
+/* colour scheme 1*/
+/* --purple-blue: #201941;
 --red-orange: #C5541E;
 --yellow-orange: #FAAD2E;
 --light-gray: #E2DCC8;
 --font-color: var(--yellow-orange);
-
+ */
+/* colour scheme 2*/
+--sand: #EFC87F;
+--pink-red: #F28AB3;
+--turquoise: #A5F7CE;
+--aqua: #17EFBD;
+--dul-pink: #D87DB7;
+--purple-blue: #201941;
+--red-orange: #C5541E;
+--yellow-orange: #FAAD2E;
+--light-gray: #E2DCC8;
+--font-color: var(--purple-blue);
+--font-navbar: var(--light-gray);
 }
 
 button {
@@ -38,14 +50,18 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--purple-blue);
-  color: var(--font-color);
+  /* background-color: var(--purple-blue); */
+  background: rgb(32,25,65);
+  background: linear-gradient(90deg, rgba(32,25,65,1) 0%, rgba(23,239,189,1) 49%, rgba(32,25,65,1) 100%);
+  color: var(--font-navbar);
+  border-radius: 12px;
 }
 
 .logo {
   font-family: Arial;
   font-size: 1.5rem;
   margin: .5rem;
+  color: white;
 }
 
 .nav-links ul{
@@ -60,13 +76,27 @@ button {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--font-navbar);
   padding: 1rem;
   display: block;
 }
 
+.active {
+  background-color: var(--sand);
+  border-radius: 12px;
+} 
+
+.active a {
+    color: var(--purple-blue);
+}
+
 .nav-links li:hover {
-  background-color: #555;
+  background-color: var(--red-orange);
+  border-radius: 12px;
+}
+
+.nav-links li:hover a {
+  color: var(--font-navbar) !important;
 }
 
 .timer {
@@ -334,6 +364,9 @@ background-position: center;
   color: black;
 }
 
+.chalkboard .navbar {
+  border: 1px white;
+}
 .plaid {
   background-image: url('../images/plaid.jpg');
 }
