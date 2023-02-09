@@ -19,6 +19,13 @@ body {
 
 :root {
 --card-size: 120px;
+/* colour scheme */
+--purple-blue: #201941;
+--red-orange: #C5541E;
+--yellow-orange: #FAAD2E;
+--light-gray: #E2DCC8;
+--font-color: var(--yellow-orange);
+
 }
 
 button {
@@ -31,8 +38,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
+  background-color: var(--purple-blue);
+  color: var(--font-color);
 }
 
 .logo {
@@ -53,7 +60,7 @@ button {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--font-color);
   padding: 1rem;
   display: block;
 }
@@ -72,7 +79,6 @@ button {
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
-  color: black;
 }
 
 /* Applies to all <h1>...</h1> elements. */
