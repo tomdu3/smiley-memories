@@ -258,6 +258,10 @@ backface-visibility: hidden;
   transform: rotateY(-180deg);
 }
 
+#close-btn {
+  height: 1rem;
+}
+
 /* define back images */
 .image-1 {
 background-image: url('../images/cards/1.png');

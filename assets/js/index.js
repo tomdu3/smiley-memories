@@ -287,7 +287,7 @@ function resumeTimer() {
 
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector("#rules");
-const closeModal = document.querySelector("#close-button");
+const closeModal = document.querySelector("#close-btn");
 
 // modal functions - timer paused when opened
 openModal.addEventListener("click", () => {
