@@ -174,6 +174,8 @@ function gameOn(numberRows, numberColumns) {
 // game over function
 function endGame() {
   console.log("Game over");
+  generateField(4,5);
+  document.querySelector('.memory-field').setAttribute('id', 'medium');
   let gameOver = document.querySelector("#game-over");
   gameOver.innerHTML = `
   <h1>Game Over</h1>`
