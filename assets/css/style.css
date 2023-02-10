@@ -45,6 +45,7 @@ body {
 
 button {
   font-family: 'Oxygen', sans-serif;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #fff;
   padding: 15px 25px;
@@ -121,10 +122,6 @@ button {
   color: var(--font-navbar) !important;
 }
 
-fieldset {
-  border-radius: 25px;
-}
-
 legend {
   text-align: center;
   background: linear-gradient(105deg, var(--yellow-orange), var(--red-orange));
@@ -140,7 +137,7 @@ legend {
 .timer {
   font-family: 'Oxygen', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   background: linear-gradient(342deg, var(--yellow-orange), var(--red-orange));
   border-radius: 25px;
   padding: 0 10px;
@@ -153,6 +150,9 @@ legend {
   margin: auto 0;
 }
 
+.timer span {
+  font-weight: 700;
+}
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -198,6 +198,7 @@ fieldset {
   justify-content: space-around;
   background: linear-gradient(45deg, var(--yellow-orange), var(--red-orange));
   border-radius: 25px;
+  border: none;
   padding: 10px;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
@@ -502,11 +503,15 @@ footer > * {
     margin: 5px;
   }
   :root {
-    --card-size: 50px;
+    --card-size: 55px;
   }
 
   .navbar .logo, .navbar a {
     font-size: .8rem;
+  }
+
+  .game-details {
+    padding-top: 30px 0;
   }
 
   .timer {
@@ -518,6 +523,10 @@ footer > * {
 
   .level i {
     font-size: .8rem;
+  }
+
+  .memory-field > div {
+    padding: 5px 0;
   }
 
   .choice {
