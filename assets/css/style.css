@@ -502,6 +502,15 @@ footer > * {
   body {
     margin: 5px;
   }
+
+  #small {
+    --card-size: 80px;
+  }
+
+  #medium {
+    --card-size: 65px;
+  }
+
   :root {
     --card-size: 55px;
   }

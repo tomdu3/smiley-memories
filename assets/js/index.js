@@ -88,6 +88,7 @@ function displaySolution(arr, rows, columns) {
 
 // start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
+  document.querySelector(".timer span").style.visibility = 'hidden';
   generateField(numberRows, numberColumns);
   timerOn = true;
   document.querySelector("#game-over").innerHTML = '';
@@ -96,6 +97,7 @@ function gameOn(numberRows, numberColumns) {
   console.log(field);
 
   displaySolution(field, numberRows, numberColumns);
+  document.querySelector(".timer span").style.visibility = 'unset';
   timer();
   // verify click on a card
   let cardDivs = [...document.querySelectorAll(".card")];
@@ -201,20 +203,25 @@ const newGameBtn = document.getElementById("new-game");
 newGameBtn.onclick = function(e) {
 let radioLevel = document.querySelector('input[name="level"]:checked');
   if (radioLevel.value === 'easy') {
-    startTime = 30; 
+    startTime = 30;
+    document.querySelector('.memory-field').setAttribute('id', 'small');
     gameOn(3,4);
   } else if (radioLevel.value === 'moderate') {
     startTime = 60; 
+    document.querySelector('.memory-field').setAttribute('id', 'medium');
     gameOn(4,5);
   } else {
-    startTime = 90; 
+    startTime = 90;
+    document.querySelector('.memory-field').setAttribute('id', 'big');
     gameOn(5,6);
   }
 }
 
 // display game field on first run
 
-generateField(4, 5);
+generateField(4,5);
+document.querySelector('.memory-field').setAttribute('id', 'medium');
+
 
 // sound off/on
 let soundButton = document.getElementById('sound-toggle');
