@@ -485,8 +485,21 @@ footer > * {
   .logo {
     font-size: 1rem;
   }
+
   :root {
     --card-size: 90px;
+  }
+
+  .memory-field, .memory-field .row {
+    gap: 30px;
+  }
+
+  #small {
+    --card-size: 120px;
+  }
+
+  #medium {
+    --card-size: 100px;
   }
   level > * {
     display: flex;
@@ -536,6 +549,10 @@ footer > * {
 
   .memory-field > div {
     padding: 5px 0;
+  }
+
+  .memory-field, .memory-field .row {
+    gap: 10px;
   }
 
   .choice {
