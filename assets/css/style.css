@@ -528,8 +528,18 @@ footer > * {
     font-size: 1.2rem;
   }
 }
+@media (max-height: 800px) {
 
-@media (max-width: 600px) {
+  .game-details, .choice {
+    padding: 10px 0;
+  }
+
+  #small, #medium, #big {
+    --card-size: 55px;
+  }
+
+}
+@media (max-width: 600px), screen and (max-height: 800px){
   body {
     margin: 5px;
   }
