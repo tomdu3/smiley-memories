@@ -750,3 +750,11 @@ footer > * {
   }
 
 }
+
+/* even smaller screens */
+
+@media (max-height: 600px) {
+  footer {
+    position: relative;
+  }
+}
