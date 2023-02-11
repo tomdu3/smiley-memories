@@ -292,6 +292,34 @@ backface-visibility: hidden;
   display: none;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+section h1 {
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+
+article {
+  font-family: Oxygen;
+  font-size: 1rem;
+}
+
+.image {
+  text-align: center;
+}
+
+#memory-img {
+  width: 350px;
+}
+
+
+
 /* define back images */
 .image-1 {
 background-image: url('../images/cards/1.png');
@@ -634,6 +662,27 @@ footer > * {
   fieldset label {
     font-size: .8rem;
     padding-right: 2px;
+  }
+
+  section {
+    padding: 0 10px;
+  }
+  
+  section h1 {
+    padding: 20px 0;
+    font-size: 1.5rem;
+  }
+  
+  article {
+    font-size: .8rem;
+  }
+  
+  .image {
+    text-align: center;
+  }
+  
+  #memory-img {
+    width: 200px;
   }
 
 }
