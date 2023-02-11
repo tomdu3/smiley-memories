@@ -2,17 +2,14 @@
 const flipSound = document.querySelector(`audio[data-sound='flip']`);
 const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
-const yeahSound = document.querySelector(`audio[data-sound='yeah']`)
-const owSound = document.querySelector(`audio[data-sound='ow']`)
+const yeahSound = document.querySelector(`audio[data-sound='yeah']`);
+const owSound = document.querySelector(`audio[data-sound='ow']`);
 let currentTimeIntervalId;
 let playSound = true;
 let startTime;
 let possibleSolutions; // control array for the solutions
 let timerOn = true;
 let alreadyPlayed;
-// define size of the field
-let numberRows;
-let numberColumns;
 
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
@@ -192,7 +189,7 @@ function endGameLose() {
   let gameOver = document.querySelector("#game-over");
   gameOver.innerHTML = `
   <h1>You've lost!</h1>
-  <p>Sorry! Hit <strong>(New Game)</strong> and practice more!</p>`
+  <p>Sorry! Hit <strong>(New Game)</strong> and practice more!</p>`;
   owSound.play();
   gameOver.style.display = "unset";
 }
@@ -232,7 +229,7 @@ newGameBtn.onclick = function(e) {
     document.querySelector('.memory-field').setAttribute('id', 'big');
     gameOn(5, 6);
   }
-}
+};
 
 // display game field on first run
 generateField(4, 5);

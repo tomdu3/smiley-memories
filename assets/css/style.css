@@ -628,7 +628,7 @@ footer>* {
 }
 
 /* medium screens with the height up to 800px */
-@media (max-height: 800px) {
+@media (max-height: 802px) {
 
   .game-details,
   .choice {
