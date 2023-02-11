@@ -232,6 +232,22 @@ This radio selection menu changes the background of the web page upon selection.
 [Back to top ⇧](#)
 
 
+## Issues and Bugs 
+The developer ran into several issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
+
+**Card Flipping Bug** - There was a bug detected that was caused by an EventListener linked with the card selection in combination with a delay of the  back flip of the cards that were wrongly selected. The delay has caused an issue in which allowed a card, that was supposed to flip back, to be selected as a newly chosen second guess, thus causing the switching of the front/back side of the card. The reason for this was that upon the choosing right pair, that pair would be taken from the arrays of nodes, and the delayed flip of the previously wrong card wouldn't be possible because it was removed from the array.
+The developer first increased the speed of the flip and decreased the time of the delay. Then, later, he introduced the temporary variables to take the value of the chosen cards in order to avoid the collision with the delayed function.
+
+**Timer Recursion Bug** - A bug was detected when introduced the timer function. Because of the recursive call to the timer method, upon restarting the game, the old timer would collide with the new one and it  would appear a parallel counting that resulted in a timer constantly reproposing different times and thus trying to make them appear at the same time. The Mentor was the one who helped developer to use the function for the clearing interval and the interval id.
+
+**End Game Lose Bugs** - A bug was detected that caused an impossibility to end game by losing if non of the cards were selected.  The first bug waited for the user to click at least one card before ending the game, even if the timer was long at 0. The other bug appeared when the game was lost, and was ended, but the unflipped cards were still clickable. Thus, despite the fact the game was over,  the user could still play. The developer sorted out these bugs by creating a new unplayable field upon the timer reaching 0, so the end of game by losing would be declared and the game couldn't be played until the new game started.
+
+**Timer not stopping after Game Ending Bug** - A bug was detected which allowed timer to continu decrease after the game was over. The developer solved this issue by declearing the time variable outside the timer function, thus allowing the timer to be stopped at any moment (e.g. this functionality was also needed in order to pause the timer upon opening modal window during the active game). 
+
+[Back to top ⇧](#)
+
+
+
       ## Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
