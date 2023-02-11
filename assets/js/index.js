@@ -2,6 +2,8 @@
 const flipSound = document.querySelector(`audio[data-sound='flip']`);
 const screamSound = document.querySelector(`audio[data-sound='scream']`);
 const tadaSound = document.querySelector(`audio[data-sound='tada']`);
+const yeahSound = document.querySelector(`audio[data-sound='yeah']`)
+const owSound = document.querySelector(`audio[data-sound='ow']`)
 let currentTimeIntervalId;
 let playSound = true;
 let startTime;
@@ -88,7 +90,7 @@ function displaySolution(arr, rows, columns) {
 
 // start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
-  document.querySelector(".timer span").style.visibility = 'hidden';
+  document.querySelector(".timer span").innerText = '_.__';
   generateField(numberRows, numberColumns);
   timerOn = true;
   document.querySelector("#game-over").innerHTML = '';
@@ -97,7 +99,6 @@ function gameOn(numberRows, numberColumns) {
   console.log(field);
 
   displaySolution(field, numberRows, numberColumns);
-  document.querySelector(".timer span").style.visibility = 'unset';
   timer();
   // verify click on a card
   let cardDivs = [...document.querySelectorAll(".card")];
@@ -164,21 +165,33 @@ function gameOn(numberRows, numberColumns) {
     }
     console.log(possibleSolutions);
     if (possibleSolutions === 0) {
-      endGame();
       timerOn = false;
+      endGameWin();
       return;
     }
   });
 }
 
 // game over function
-function endGame() {
-  console.log("Game over");
+function endGameWin() {
+  console.log("Game over. You win!");
+  let gameOver = document.querySelector("#game-over");
+  yeahSound.play();
+  gameOver.innerHTML = `
+  <h1>You've won!!!</h1>
+  <p>Congratulations! Hit <strong>(New Game)</strong> to play again!</p>`;
+  gameOver.style.display="unset";
+}
+
+function endGameLose() {
+  console.log("Game over. You've lost!");
   generateField(4,5);
   document.querySelector('.memory-field').setAttribute('id', 'medium');
   let gameOver = document.querySelector("#game-over");
   gameOver.innerHTML = `
-  <h1>Game Over</h1>`
+  <h1>You've lost!</h1>
+  <p>Sorry! Hit <strong>(New Game)</strong> and practice more!</p>`
+  owSound.play();
   gameOver.style.display="unset";
 }
 
@@ -267,7 +280,7 @@ function timer() {
     }
 
     if (currentTime === 0) {
-      endGame();
+      endGameLose();
       timerOn = false;
       return;
     }
