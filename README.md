@@ -280,6 +280,33 @@ The developer first increased the speed of the flip and decreased the time of th
 [Back to top ⇧](#)
 
 
+## Testing
+### Testing User Stories
+
+#### New User Goals:
+1. As a new user, I want to easily navigate the site intuitively.
+	-  The navigation bar brings to the both of the pages, indicating the current one, and showing the possible selection of the other.
+2. As a new user, I want the instructions to be easily found, clear and concise.
+	- The rules of the game and instructions are clearly given in the modal window that appears upon first page load, and can be called by clicking on the corresponding button. 
+3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
+  - There is a somewhat engagin, but not overpowering, colour scheme across the site.
+  - The user has a choice of theme when at any moment, before, during, or after the game . 
+  - The theme choices change the colours of the header, footer and body of the page, if the background is dark.
+4. As a new user, I want to find sound effects accompanying playing of the game and a possibility  to switch the sound on/off.
+- As already described above, there are sound effects accompanying the game events, and the relative button that switches them on and off.
+5. As a new user, I want to find out something interesting.
+- There is an interesting story on the About Page, and the card images, flipping effects and sound, make this game quite compelling.
+
+#### Current User
+1. As a current user, I want to have different difficulty options, to challenge myself.
+- There are different difficulty choices that increase number of the cards. But the corresponding increase of time is not proportional to the increase of number. 
+2. As a current user, I want to have randomly generated card board solution for every new game and every difficulty level.
+- Every time the game starts, the shuffle JavaScript function gives a new combination of the order of cards.
+3. As a current user, I want to easily find instructions how to play game and info about the game.
+- As mentioned earlier, the modal window with instruction appears on initial page load and can be accessed at any time by clicking on the relative button. The same action would stop the timer, if the game is on, so that the user can calmly go through the text.
+
+[Back to top ⇧](#)
+
 
       ## Gitpod Reminders
 
