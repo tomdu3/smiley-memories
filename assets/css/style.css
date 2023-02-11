@@ -3,60 +3,30 @@
 * {
   display: border-box;
 }
-html, body {
+
+html,
+body {
   height: 100%;
 }
-/* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
 
 body {
   margin: 25px;
   padding: 0;
-  font-family: 'Oxygen', sans-serif;  font-size: 14px;
-}
-
-:root {
---card-size: 120px;
-/* colour scheme 1*/
-/* --purple-blue: #201941;
---red-orange: #C5541E;
---yellow-orange: #FAAD2E;
---light-gray: #E2DCC8;
---font-color: var(--yellow-orange);
- */
-/* colour scheme 2*/
---sand: #EFC87F;
---pink-red: #F28AB3;
---turquoise: #A5F7CE;
---aqua: #17EFBD;
---dul-pink: #D87DB7;
---purple-blue: #201941;
---red-orange: #C5541E;
---yellow-orange: #FAAD2E;
---light-gray: #E2DCC8;
---font-color: var(--purple-blue);
---font-navbar: var(--light-gray);
-}
-
-button {
   font-family: 'Oxygen', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
-  padding: 10px 15px;
-  height: 3rem;
-  margin: auto 0;
-  background-color: #38D2D2;
-  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
-  border-radius: 14px;
-  /* font-weight: bold;
-  font-size: 16px; */
-  border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  cursor: pointer;
+  font-size: 14px;
+}
+
+/* variables definition */
+:root {
+  --card-size: 120px;
+
+  /* colour scheme*/
+  --sand: #EFC87F;
+  --purple-blue: #201941;
+  --red-orange: #C5541E;
+  --yellow-orange: #FAAD2E;
+  --light-gray: #E2DCC8;
+  --font-navbar: var(--light-gray);
 }
 
 /* navbar */
@@ -65,8 +35,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(32,25,65);
-  background: linear-gradient(90deg, rgba(32,25,65,1) 0%, rgba(23,239,189,1) 49%, rgba(32,25,65,1) 100%);
+  background: rgb(32, 25, 65);
+  background: linear-gradient(90deg, rgba(32, 25, 65, 1) 0%, rgba(23, 239, 189, 1) 49%, rgba(32, 25, 65, 1) 100%);
   color: var(--font-navbar);
   border-radius: 12px;
 }
@@ -84,7 +54,8 @@ button {
   color: var(--light-gray);
 
 }
-.nav-links ul{
+
+.nav-links ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -107,7 +78,7 @@ button {
   background-color: var(--sand);
   opacity: 0.7;
   border-radius: 12px;
-} 
+}
 
 .active a {
   color: var(--purple-blue);
@@ -123,6 +94,26 @@ button {
   color: var(--font-navbar) !important;
 }
 
+button {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 15px;
+  height: 3rem;
+  margin: auto 0;
+  background-color: #38D2D2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Radio menues - Background, Level */
 legend {
   text-align: center;
   background: linear-gradient(105deg, var(--yellow-orange), var(--red-orange));
@@ -135,6 +126,7 @@ legend {
   padding: 20px 0;
 }
 
+/* timer */
 .timer {
   font-family: 'Oxygen', sans-serif;
   font-size: 1rem;
@@ -154,6 +146,8 @@ legend {
 .timer span {
   font-weight: 700;
 }
+
+/* level menu*/
 .level i {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -175,7 +169,8 @@ input[type='radio'] {
   cursor: pointer;
 }
 
-.back-image, .level {
+.back-image,
+.level {
   display: flex;
   justify-self: space-around;
 }
@@ -203,59 +198,57 @@ fieldset {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* card size for the hard level */
 #big {
   --card-size: 100px;
 }
 
-#big, #big .row {
+#big,
+#big .row {
   gap: 5px;
 }
 
+/* field for the cards */
 .memory-field {
   margin: 0 auto;
-display: flex;
-flex-direction: column;
-/* background-color: red; */
-width: fit-content;
-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: fit-content;
+  gap: 10px;
 }
 
 .row {
-display: flex;
-flex-direction: row;
-gap: 10px;
-perspective: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  perspective: 800px;
 }
 
+/* single card display with */
 .card {
-display: flex;
-width: var(--card-size);
-height: var(--card-size);
-/* background-color: yellowgreen; */
-/* background: rgb(255,255,255);
-background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(226,220,200,1) 36%); */
-background: rgb(226,220,200);
-background: linear-gradient(45deg, rgba(226,220,200,0.8491771708683473) 41%, rgba(250,173,46,1) 67%, rgba(197,84,30,1) 97%);
-border-radius: 20%;
-box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
-/* temporary solution display */
-text-align: center;
-justify-content: center;
-align-items: center;
-position: relative;
-transform-style: preserve-3d;
-transition: all .5s ease;
+  display: flex;
+  width: var(--card-size);
+  height: var(--card-size);
+  background: rgb(226, 220, 200);
+  background: linear-gradient(45deg, rgba(226, 220, 200, 0.8491771708683473) 41%, rgba(250, 173, 46, 1) 67%, rgba(197, 84, 30, 1) 97%);
+  border-radius: 20%;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all .5s ease;
 }
 
-/* div .card {
-font-size:1;
-} */
-
-.front, .back {
-width: var(--card-size);
-height: var(--card-size);
-position: absolute;
-backface-visibility: hidden;
+/* card face and back definition */
+.front,
+.back {
+  width: var(--card-size);
+  height: var(--card-size);
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .back {
@@ -267,7 +260,8 @@ backface-visibility: hidden;
 }
 
 /* modal */
-.modal, #game-over {
+.modal,
+#game-over {
   display: flex;
   font-size: 1.2rem;
   flex-direction: column;
@@ -276,8 +270,8 @@ backface-visibility: hidden;
   border-radius: 25px;
   border: 2px solid var(--purple-blue);
   color: var(--purple-blue);
-  background: rgb(226,220,200);
-  background: linear-gradient(45deg, rgba(226,220,200,0.8491771708683473) 39%, rgba(250,173,46,1) 86%);
+  background: rgb(226, 220, 200);
+  background: linear-gradient(45deg, rgba(226, 220, 200, 0.8491771708683473) 39%, rgba(250, 173, 46, 1) 86%);
 
 }
 
@@ -292,6 +286,7 @@ backface-visibility: hidden;
   display: none;
 }
 
+/* Section on About Page */
 section {
   display: flex;
   flex-direction: column;
@@ -320,136 +315,141 @@ article {
 
 
 /* define back images */
+/* from https://pixabay.com/ by Christian Dorn */
 .image-1 {
-background-image: url('../images/cards/1.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/1.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-2 {
-background-image: url('../images/cards/2.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/2.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-3 {
-background-image: url('../images/cards/3.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/3.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-4 {
-background-image: url('../images/cards/4.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/4.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-5 {
-background-image: url('../images/cards/5.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/5.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-6 {
-background-image: url('../images/cards/6.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/6.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .image-7 {
-background-image: url('../images/cards/7.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/7.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-8 {
-background-image: url('../images/cards/8.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/8.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-9 {
-background-image: url('../images/cards/9.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/9.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-10 {
-background-image: url('../images/cards/10.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/10.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-11 {
-background-image: url('../images/cards/11.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/11.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-12 {
-background-image: url('../images/cards/12.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/12.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .image-13 {
-background-image: url('../images/cards/13.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/13.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .image-14 {
-background-image: url('../images/cards/14.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/14.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .image-15 {
-background-image: url('../images/cards/15.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/15.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-16 {
-background-image: url('../images/cards/16.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/16.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-17 {
-background-image: url('../images/cards/17.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/17.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .image-18 {
-background-image: url('../images/cards/18.webp');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
+  background-image: url('../images/cards/18.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* define different backgrounds */
+/* define different backgrounds for the background change */
+
 /* from www.cssmatic.com */
 .rough-paper {
   background-image: url('../images/img-rough-paper-361x370.webp');
 }
 
 /* from http://thepatternlibrary.com/ */
-
 .cycles {
   background-image: url('../images/cycles.webp');
   color: white;
@@ -460,23 +460,28 @@ background-position: center;
   color: white;
 }
 
-.chalkboard i, .cycles i {
+.chalkboard i,
+.cycles i {
   color: white;
 }
 
-.chalkboard #sound-toggle>i, .cycles #sound-toggle>i {
+.chalkboard #sound-toggle>i,
+.cycles #sound-toggle>i {
   color: white;
 }
 
-.chalkboard .navbar, .cycles  .navbar {
+.chalkboard .navbar,
+.cycles .navbar {
   border: 1px white;
 }
 
-.chalkboard .timer, .cycles .timer {
+.chalkboard .timer,
+.cycles .timer {
   box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
 }
 
-.chalkboard .fa-brands:hover, .cycles .fa-brands:hover {
+.chalkboard .fa-brands:hover,
+.cycles .fa-brands:hover {
   color: var(--red-orange);
 }
 
@@ -488,7 +493,8 @@ background-position: center;
   font-size: 1.5rem;
 }
 
-#sound-div, #sound-div i {
+#sound-div,
+#sound-div i {
   margin: 0px;
 }
 
@@ -536,7 +542,7 @@ footer p {
   justify-content: center;
 }
 
-footer > * {
+footer>* {
   flex: 1;
 }
 
@@ -546,10 +552,11 @@ footer > * {
   justify-content: center;
 }
 
-.social-links > * {
+.social-links>* {
   margin: 0 10px;
 }
-.copyright > * {
+
+.copyright>* {
   align-items: baseline;
 }
 
@@ -563,15 +570,18 @@ footer > * {
 
 .warning img {
   padding: 20px;
-  width: 50%;;
+  width: 50%;
+  ;
 }
 
-.warning a, .warning i {
+.warning a,
+.warning i {
   text-decoration: none;
   color: var(--yellow-orange);
 }
 
-.warning a:hover, .warning a:hover i {
+.warning a:hover,
+.warning a:hover i {
   color: var(--red-orange);
 }
 
@@ -579,16 +589,20 @@ footer > * {
   color: var(--light-gray);
 }
 
-@media (max-width: 900px) {
-  .logo {
-    font-size: 1.2rem;
-  }
+/* media queries */
 
+/* medium screens */
+@media (max-width: 900px) {
   :root {
     --card-size: 90px;
   }
 
-  .memory-field, .memory-field .row {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .memory-field,
+  .memory-field .row {
     gap: 20px;
   }
 
@@ -615,13 +629,18 @@ footer > * {
     font-size: 1.2rem;
   }
 }
+
+/* medium screens with the height up to 800px */
 @media (max-height: 800px) {
 
-  .game-details, .choice {
+  .game-details,
+  .choice {
     padding: 10px 0;
   }
 
-  #small, #medium, #big {
+  #small,
+  #medium,
+  #big {
     --card-size: 55px;
   }
 
@@ -644,7 +663,9 @@ footer > * {
 
 
 }
-@media (max-width: 600px){
+
+/* small screens */
+@media (max-width: 600px) {
   body {
     margin: 5px;
   }
@@ -676,6 +697,7 @@ footer > * {
   .timer {
     font-size: 0.8rem;
   }
+
   .level {
     font-size: .6rem;
   }
@@ -684,11 +706,12 @@ footer > * {
     font-size: .8rem;
   }
 
-  .memory-field > div {
+  .memory-field>div {
     padding: 5px 0;
   }
 
-  .memory-field, .memory-field .row {
+  .memory-field,
+  .memory-field .row {
     gap: 10px;
   }
 
@@ -723,7 +746,7 @@ footer > * {
   fieldset {
     padding: 0 5px 5px 5px;
   }
-  
+
   fieldset label {
     font-size: .8rem;
     padding-right: 2px;
@@ -732,29 +755,28 @@ footer > * {
   section {
     padding: 0 10px;
   }
-  
+
   section h1 {
     padding: 10px 0;
     font-size: 1.5rem;
   }
-  
+
   article {
     font-size: .8rem;
     padding: 0 5%;
   }
-  
+
   .image {
     text-align: center;
   }
-  
+
   #memory-img {
     width: 200px;
   }
 
 }
 
-/* even smaller screens */
-
+/* screens with the height up to 600px */
 @media (max-height: 600px) {
   footer {
     position: relative;
