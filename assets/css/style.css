@@ -272,7 +272,7 @@ backface-visibility: hidden;
   font-size: 1.2rem;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 50%;
   border-radius: 25px;
   border: 2px solid var(--purple-blue);
   color: var(--purple-blue);
@@ -599,6 +599,7 @@ footer > * {
   }
 
   .modal {
+    width: 60%;
     font-size: 1rem;
   }
 
@@ -690,6 +691,7 @@ footer > * {
   }
 
   .modal {
+    width: 50%;
     font-size: 0.8rem;
   }
 
