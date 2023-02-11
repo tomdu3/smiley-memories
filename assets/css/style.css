@@ -568,16 +568,17 @@ footer > * {
 
 .warning a, .warning i {
   text-decoration: none;
+  color: var(--yellow-orange);
+}
+
+.warning a:hover, .warning a:hover i {
   color: var(--red-orange);
 }
 
-.warning a:hover, .warning i:hover {
-  color: var(--yellow-orange);
+.warning span {
+  color: var(--light-gray);
 }
 
-.warning span {
-  color: var(--yellow-orange);
-}
 @media (max-width: 900px) {
   .logo {
     font-size: 1.2rem;
