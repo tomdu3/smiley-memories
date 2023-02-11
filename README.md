@@ -133,7 +133,18 @@ The above mentioned information  were  organized in a site map, showing how user
 ![Site Map](assets/readme_files/sitemap.png)
 
 </details>
-        
+
+#### Skeleton
+The wireframes were created using a desktop version of [Balsamiq](https://balsamiq.com/).
+
+
+<details>
+<summary>Balsamiq Wireframes</summary>
+    
+![Wireframes](assets/readme_files/wireframes.png)
+
+</details>
+
         
       ## Gitpod Reminders
 
