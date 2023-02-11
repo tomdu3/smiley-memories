@@ -145,6 +145,30 @@ The wireframes were created using a desktop version of [Balsamiq](https://balsam
 
 </details>
 
+### Design
+#### Colour Scheme
+The default colour scheme was made by [Canva Color Palette Generator](https://www.canva.com/colors/color-palette-generator/).
+
+<details>
+<summary>Colour Palette</summary>
+    
+![Wireframes](assets/readme_files/palette.png)
+
+</details>
+
+To that colour scheme, there was added Medium Turquoise colour (#38D2D2) for the buttons with 3d effect from the website [Beautiful CSS buttons examples](https://getcssscan.com/css-buttons-examples).
+The same colour was used for the gradient effect on the navbar, with the help of [CSS Gradient](https://cssgradient.io/) web app.
+
+#### Typography
+Fonts used on the website are from the [Google Fonts](https://fonts.google.com/), namely **Carter One** and **Oxygen**. Carter One appears in the Logo, whilst Oxygen in the rest of the website.
+
+#### Imagery
+The images are taken from the different sources and are credited in the Credits of this file. The main sources were: 
+	- [Pixabay](https://pixabay.com/) for the front face of the cards,
+	- [Unsplash](https://unsplash.com/) for the image for 404 page.
+	- [The Pattern Library](http://thepatternlibrary.com/) for the background images. 
+
+[Back to top ⇧](#)
         
       ## Gitpod Reminders
 
