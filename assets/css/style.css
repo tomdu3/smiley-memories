@@ -501,6 +501,10 @@ background-position: center;
   padding: 20px;
 }
 
+#game-over p {
+  text-align: center;
+}
+
 footer {
   bottom: 0;
   right: 0;

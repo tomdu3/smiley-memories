@@ -9,7 +9,7 @@ let playSound = true;
 let startTime;
 let possibleSolutions; // control array for the solutions
 let timerOn = true;
-
+let alreadyPlayed;
 
 // define size of the field
 let numberRows;
@@ -90,6 +90,7 @@ function displaySolution(arr, rows, columns) {
 
 // start a game with the filed size parameters
 function gameOn(numberRows, numberColumns) {
+  alreadyPlayed = false;
   document.querySelector(".timer span").innerText = '_.__';
   generateField(numberRows, numberColumns);
   timerOn = true;
@@ -167,6 +168,7 @@ function gameOn(numberRows, numberColumns) {
     if (possibleSolutions === 0) {
       timerOn = false;
       endGameWin();
+      alreadyPlayed = true;
       return;
     }
   });
@@ -174,6 +176,9 @@ function gameOn(numberRows, numberColumns) {
 
 // game over function
 function endGameWin() {
+  if (alreadyPlayed) {
+    return;
+  }
   console.log("Game over. You win!");
   let gameOver = document.querySelector("#game-over");
   yeahSound.play();
