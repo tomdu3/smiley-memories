@@ -1,12 +1,98 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Tomislav Dukez,
+# Smiley's Memories
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Smileys Memories Responsiveness](assets/readme-files/responsive-site.PNG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[View the live project here](https://tomdu3.github.io/smiley-memories/)
 
-## Gitpod Reminders
+## Table of contents
+1. [Introduction](#Introduction)
+2. [UX](#UX)
+    1. [Ideal User Demographic](#Ideal-User-Demographic)
+    2. [User Stories](#User-Stories)
+    3. [Development Planes](#Development-Planes)
+    4. [Design](#Design)
+3. [Features](#Features)
+    1. [Design Features](#Design-Features) 
+    2. [Existing Features](#Existing-Features)
+    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
+4. [Issues and Bugs](#Issues-and-Bugs)
+5. [Technologies Used](#Technologies-Used)
+    1. [Main Languages Used](#Main-Languages-Used)
+    3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+6. [Testing](#Testing)
+    1. [Testing User Stories](#Testing-User-Stories)
+    2. [Manual Testing](#Manual-Testing)
+    3. [Automated Testing](#Automated-Testing) 
+        - [Code Validation](#Code-Validation)
+        - [Browser Validation](#Browser-Validation)
+    4. [User Testing](#User-Testing)
+7. [Deployment](#Deployment)
+    1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
+8. [Credits](#Credits)
+    1. [Content](#Content)
+    2. [Media](#Media)
+    3. [Code](#Code)
+9. [Acknowledgements](#Acknowledgements)
+***
+
+
+## Introduction
+
+This website allows user to play a smiley emoji themed memory game. 
+
+This website was made for the second second project of the Diploma in Full Stack Software development program at The Code Institute. 
+
+This project is supposed to be be responsive and interactive front-end site based on HTML5, CSS3 and JavaScript.
+
+[Back to top ⇧](#)
+
+
+
+## UX
+### Ideal User Demographic
+The ideal user for this website is:
+* New user
+* Gamer
+
+#### New User Goals
+1. As a new user, I want to easily navigate the site intuitively. 
+2. As a new user, I want the instructions to be easily found, clear and concise.
+3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
+4. As a new user, I want to find sound effects accompanying playing of the game and a possibility  to switch the sound on/off.
+4. As a new user, I want to find out something interesting.
+
+#### Current User
+1. As a current user, I want to have different difficulty options, to challenge myself.
+2. As a current user, I want to have randomly generated card board solution for every new game and every difficulty level.
+3. As a current user, I want to easily find instructions how to play game and info about the game.
+
+### Development-Planes
+To create an interactive website that allows the user to play the game Memory Game, with the option of various game settings to challenge and entertain the user.
+
+#### Strategy
+Strategy incorporates user needs as well as product objectives. This website will focus on the following target audience, divided into three main categories:
+- **Roles:**
+    - New users
+    - Current users
+
+- **Demographic:**
+    - All ages
+    - All puzzle playing levels
+
+- **Psychographic:**
+    - Lifestyles:
+        - Interest in games
+        - Interest in puzzles
+    - Personality/Attitudes:
+        - Focused
+        - Relaxed
+        
+        
+        
+        
+      ## Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
