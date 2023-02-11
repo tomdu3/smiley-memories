@@ -450,8 +450,9 @@ background-position: center;
 
 /* from http://thepatternlibrary.com/ */
 
-.flags {
-  background-image: url('../images/bunting-flag.webp');
+.cycles {
+  background-image: url('../images/cycles.webp');
+  color: white;
 }
 
 .chalkboard {
@@ -459,23 +460,23 @@ background-position: center;
   color: white;
 }
 
-.chalkboard i {
+.chalkboard i, .cycles i {
   color: white;
 }
 
-.chalkboard #sound-toggle>i {
+.chalkboard #sound-toggle>i, .cycles #sound-toggle>i {
   color: white;
 }
 
-.chalkboard .navbar {
+.chalkboard .navbar, .cycles  .navbar {
   border: 1px white;
 }
 
-.chalkboard .timer {
+.chalkboard .timer, .cycles .timer {
   box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
 }
 
-.chalkboard .fa-brands:hover {
+.chalkboard .fa-brands:hover, .cycles .fa-brands:hover {
   color: var(--red-orange);
 }
 
