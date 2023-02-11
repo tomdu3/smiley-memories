@@ -293,12 +293,14 @@ const closeModal = document.querySelector("#close-btn");
 
 // modal functions - timer paused when opened
 openModal.addEventListener("click", () => {
+  modal.classList.toggle("closed");
   modal.showModal();
   pauseTimer();
 });
 
 closeModal.addEventListener("click", () => {
   modal.close();
+  modal.classList.toggle("closed");
   resumeTimer();
 });
 
