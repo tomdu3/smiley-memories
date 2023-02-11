@@ -321,122 +321,122 @@ article {
 
 /* define back images */
 .image-1 {
-background-image: url('../images/cards/1.png');
+background-image: url('../images/cards/1.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-2 {
-background-image: url('../images/cards/2.png');
+background-image: url('../images/cards/2.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-3 {
-background-image: url('../images/cards/3.png');
+background-image: url('../images/cards/3.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-4 {
-background-image: url('../images/cards/4.png');
+background-image: url('../images/cards/4.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-5 {
-background-image: url('../images/cards/5.png');
+background-image: url('../images/cards/5.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-6 {
-background-image: url('../images/cards/6.png');
+background-image: url('../images/cards/6.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 .image-7 {
-background-image: url('../images/cards/7.png');
+background-image: url('../images/cards/7.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-8 {
-background-image: url('../images/cards/8.png');
+background-image: url('../images/cards/8.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-9 {
-background-image: url('../images/cards/9.png');
+background-image: url('../images/cards/9.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-10 {
-background-image: url('../images/cards/10.png');
+background-image: url('../images/cards/10.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-11 {
-background-image: url('../images/cards/11.png');
+background-image: url('../images/cards/11.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-12 {
-background-image: url('../images/cards/12.png');
+background-image: url('../images/cards/12.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 .image-13 {
-background-image: url('../images/cards/13.png');
+background-image: url('../images/cards/13.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 .image-14 {
-background-image: url('../images/cards/14.png');
+background-image: url('../images/cards/14.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 .image-15 {
-background-image: url('../images/cards/15.png');
+background-image: url('../images/cards/15.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-16 {
-background-image: url('../images/cards/16.png');
+background-image: url('../images/cards/16.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-17 {
-background-image: url('../images/cards/17.png');
+background-image: url('../images/cards/17.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
 
 .image-18 {
-background-image: url('../images/cards/18.png');
+background-image: url('../images/cards/18.webp');
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
@@ -445,17 +445,17 @@ background-position: center;
 /* define different backgrounds */
 /* from www.cssmatic.com */
 .rough-paper {
-  background-image: url('../images/img-rough-paper-361x370.png');
+  background-image: url('../images/img-rough-paper-361x370.webp');
 }
 
 /* from http://thepatternlibrary.com/ */
 
 .flags {
-  background-image: url('../images/bunting-flag.png');
+  background-image: url('../images/bunting-flag.webp');
 }
 
 .chalkboard {
-  background-image: url('../images/chalkboard.jpg');
+  background-image: url('../images/chalkboard.webp');
   color: white;
 }
 
@@ -480,7 +480,7 @@ background-position: center;
 }
 
 .plaid {
-  background-image: url('../images/plaid.jpg');
+  background-image: url('../images/plaid.webp');
 }
 
 #sound-toggle {
@@ -552,6 +552,31 @@ footer > * {
   align-items: baseline;
 }
 
+/* 404 page */
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning img {
+  padding: 20px;
+  width: 80%;;
+}
+
+.warning a, .warning i {
+  text-decoration: none;
+  color: var(--red-orange);
+}
+
+.warning a:hover, .warning i:hover {
+  color: var(--yellow-orange);
+}
+
+.warning span {
+  color: var(--yellow-orange);
+}
 @media (max-width: 900px) {
   .logo {
     font-size: 1.2rem;
