@@ -247,6 +247,39 @@ The developer first increased the speed of the flip and decreased the time of th
 [Back to top ⇧](#)
 
 
+## Technologies Used
+### Main Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
+
+### Frameworks, Libraries & Programs Used
+- [Canva Color Palette Generator](https://www.canva.com/colors/color-palette-generator/)
+	- Canva Color Palette Generator was used to make the initial colour palette.
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+	- Google fonts was used to import the fonts "Special Elite", "Open Sans", "Oswald" and "Nosifer" into the style.css file. These fonts were used throughout the project.
+- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
+	- Font Awesome was used on almost all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
+- [GitPod](https://gitpod.io/ "Link to GitPod homepage")
+	- GitPod was used for writing code, committing, and then pushing to GitHub.
+- [GitHub](https://github.com/ "Link to GitHub")
+	- GitHub was used to store the project after pushing
+- [Balsamiq](https://balsamiq.com/ "Link to Balsamiq homepage")
+	- Balsamiq was used to create the wireframes during the design phase of the project.
+- [Am I Responsive?](https://amiresponsive.co.uk/ "Link to Am I Responsive Homepage")
+	- Am I Responsive was used to test responsivenes and generate design for the  mockup imagery used at the beginning of this documentation.
+ -  [Beautiful CSS buttons examples](https://getcssscan.com/css-buttons-examples)
+	- Beautiful CSS buttons was used for the 3d buttons.
+-  [CSS Gradient](https://cssgradient.io/)
+	- CSS Gradient web app was used to make gradient colour backgrounds.
+ - [Webp Converter](https://developers.google.com/speed/webp)
+	 - Webp Converter was used to convert images to WEBP format on GitPod.
+    [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
+	- GIMP was used to resize the 404 Page image.
+
+[Back to top ⇧](#)
+
+
 
       ## Gitpod Reminders
 
