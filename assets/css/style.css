@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Oxygen&family=Raleway+Dots&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Oxygen&display=swap');
 
 * {
   display: border-box;
@@ -77,7 +76,7 @@ button {
 }
 
 .logo {
-  font-family: 'Raleway Dots', cursive;
+  font-family: 'Carter One', cursive;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -511,7 +510,7 @@ footer > * {
 
 @media (max-width: 900px) {
   .logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   :root {
@@ -571,7 +570,11 @@ footer > * {
     --card-size: 55px;
   }
 
-  .navbar .logo, .navbar a {
+  .navbar .logo {
+    font-size: 1rem;
+  }
+
+  .navbar a {
     font-size: .8rem;
   }
 
