@@ -243,6 +243,8 @@ fieldset {
 }
 
 /* card face and back definition */
+/* 3d flip effect learned and adapted from Coding with Russ video: Easy Flipcard Tutorial | HTML & CSS
+*/
 .front,
 .back {
   width: var(--card-size);

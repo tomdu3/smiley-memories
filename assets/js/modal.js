@@ -1,3 +1,5 @@
+// Insipred by the instructions from Kevin Powel's video dialog = the easiest way to make a popup modal
+
 // define buttons for modal
 const modal = document.querySelector("#modal");
 const openModal = document.querySelector("#rules");

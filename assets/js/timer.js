@@ -1,3 +1,6 @@
+// Inspiration and instruction from Florin Pop's video: Simple Countdown Timer with JavaScript - Day 21
+// My mentor Koko showed me the right way to use clearInferval and intervalId
+
 //timer function
 function timer() {
 
