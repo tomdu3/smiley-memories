@@ -10,10 +10,10 @@ let startTime;
 let possibleSolutions; // control array for the solutions
 let timerOn = true;
 let alreadyPlayed;
-
 // define size of the field
 let numberRows;
 let numberColumns;
+
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
   let fieldHtml = document.querySelector(".memory-field");
@@ -39,7 +39,6 @@ function generateSolution(rows, columns) {
   for (let i = 0; i < rows; i++) {
     field.push([]);
   }
-  console.log(field);
   const control_choice = [];
   for (let i = 0; i < (rows * columns) / 2; i++) {
     control_choice.push(0);
@@ -53,7 +52,6 @@ function generateSolution(rows, columns) {
           choice = Math.floor((Math.random() * rows * columns) / 2);
           if (control_choice[choice] !== 2) {
             control_choice[choice] += 1;
-            console.log(i, j);
             field[i][j] = choice;
             break;
           }
@@ -64,17 +62,14 @@ function generateSolution(rows, columns) {
       }
     }
   }
-  console.log(control_choice);
   return field;
 }
 
 // display solution of the game - later cards
 function displaySolution(arr, rows, columns) {
-  // let cards = [[], []];
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns; j++) {
       let card = document.querySelector(`#card-${i}${j}`);
-      // cards[i][j] = card;
       card.dataset.value = `${arr[i][j]}`;
       card.classList.add(`${arr[i][j]}`);
       card.innerHTML = `
@@ -82,13 +77,12 @@ function displaySolution(arr, rows, columns) {
       </div>
       <div class="front" data-value="${arr[i][j]}">
       </div>`;
-      console.log(card);
       card.children[0].classList.add(`image-${arr[i][j] + 1}`);
     }
   }
 }
 
-// start a game with the filed size parameters
+// start a game with the field size parameters
 function gameOn(numberRows, numberColumns) {
   alreadyPlayed = false;
   document.querySelector(".timer span").innerText = '_.__';
@@ -97,23 +91,24 @@ function gameOn(numberRows, numberColumns) {
   document.querySelector("#game-over").innerHTML = '';
   document.querySelector("#game-over").style.display = 'none';
   let field = generateSolution(numberRows, numberColumns);
-  console.log(field);
 
+  // generate field with cards shuffled
   displaySolution(field, numberRows, numberColumns);
   timer();
+
   // verify click on a card
   let cardDivs = [...document.querySelectorAll(".card")];
   console.log(cardDivs);
 
   let firstCard = null;
   possibleSolutions = (numberRows * numberColumns) / 2;
-  document.body.addEventListener("click", function (e) {
+  document.body.addEventListener("click", function(e) {
     let tempFirstCard, tempCard;
     for (let cardDiv of cardDivs) {
-      // console.log(cardDiv.children);
       if (cardDiv.contains(e.target)) {
         console.log(e.target);
         if (firstCard) {
+
           // if first card is the same as one clicked on, flip it back
           if (firstCard.contains(e.target)) {
             if (playSound) {
@@ -121,6 +116,7 @@ function gameOn(numberRows, numberColumns) {
             }
             flipCard(firstCard);
             firstCard = null;
+
             // if the value of the second card is the same as of the first one
           } else if (firstCard.dataset.value === e.target.dataset.value) {
             tadaSound.currentTime = 0;
@@ -131,11 +127,13 @@ function gameOn(numberRows, numberColumns) {
             if (playSound) {
               tadaSound.play();
             }
+
             // take out the cards that were guessed correctly
             cardDivs.splice(cardDivs.indexOf(firstCard), 1);
             cardDivs.splice(cardDivs.indexOf(cardDiv), 1);
             firstCard = null;
             possibleSolutions--;
+
             // if the value of the second card is different from the first one - flip them both back and play a sound
           } else {
             if (playSound) {
@@ -153,6 +151,7 @@ function gameOn(numberRows, numberColumns) {
               flipCard(tempCard);
             }, 400);
           }
+
           // if chosen the first card - flip
         } else {
           firstCard = cardDiv;
@@ -161,10 +160,8 @@ function gameOn(numberRows, numberColumns) {
           }
           flipCard(firstCard);
         }
-        console.log(`clicked card:${cardDiv.id}`);
       }
     }
-    console.log(possibleSolutions);
     if (possibleSolutions === 0) {
       timerOn = false;
       endGameWin();
@@ -174,30 +171,30 @@ function gameOn(numberRows, numberColumns) {
   });
 }
 
-// game over function
+// end game as winner function
 function endGameWin() {
   if (alreadyPlayed) {
     return;
   }
-  console.log("Game over. You win!");
   let gameOver = document.querySelector("#game-over");
   yeahSound.play();
   gameOver.innerHTML = `
   <h1>You've won!!!</h1>
   <p>Congratulations! Hit <strong>(New Game)</strong> to play again!</p>`;
-  gameOver.style.display="unset";
+  gameOver.style.display = "unset";
 }
 
+// end game as loser function
 function endGameLose() {
-  console.log("Game over. You've lost!");
-  generateField(4,5);
+  // repaint the cards as initial screen - all faces down
+  generateField(4, 5);
   document.querySelector('.memory-field').setAttribute('id', 'medium');
   let gameOver = document.querySelector("#game-over");
   gameOver.innerHTML = `
   <h1>You've lost!</h1>
   <p>Sorry! Hit <strong>(New Game)</strong> and practice more!</p>`
   owSound.play();
-  gameOver.style.display="unset";
+  gameOver.style.display = "unset";
 }
 
 // flip card function 
@@ -206,9 +203,9 @@ function flipCard(card) {
   card.classList.toggle("toggleCard");
 }
 
-
-// change background
+// change background by slecting a corresponding radio button
 let radioBtns = document.querySelectorAll('input[name="back"]');
+
 function findSelected() {
   let selected = document.querySelector('input[name="back"]:checked').value;
   document.body.classList = [`${selected}`];
@@ -221,107 +218,29 @@ findSelected();
 // new game and level function
 const newGameBtn = document.getElementById("new-game");
 newGameBtn.onclick = function(e) {
-let radioLevel = document.querySelector('input[name="level"]:checked');
+  let radioLevel = document.querySelector('input[name="level"]:checked');
   if (radioLevel.value === 'easy') {
     startTime = 30;
     document.querySelector('.memory-field').setAttribute('id', 'small');
-    gameOn(3,4);
+    gameOn(3, 4);
   } else if (radioLevel.value === 'moderate') {
-    startTime = 60; 
+    startTime = 60;
     document.querySelector('.memory-field').setAttribute('id', 'medium');
-    gameOn(4,5);
+    gameOn(4, 5);
   } else {
     startTime = 90;
     document.querySelector('.memory-field').setAttribute('id', 'big');
-    gameOn(5,6);
+    gameOn(5, 6);
   }
 }
 
 // display game field on first run
-
-generateField(4,5);
+generateField(4, 5);
 document.querySelector('.memory-field').setAttribute('id', 'medium');
 
-
-// sound off/on
+// control sound button off/on
 let soundButton = document.getElementById('sound-toggle');
-soundButton.onclick = function (e) {
-    playSound = playSound ? false: true;
-    
-    this.innerHTML = this.innerHTML === '<i class="fa-solid fa-volume-high"></i>' ? '<i class="fa-solid fa-volume-xmark"></i>': '<i class="fa-solid fa-volume-high"></i>';
-};
-
-
-// call to start game
-// gameOn(numberRows, numberColumns);
-
-//timer function
-function timer() {
-  // restart timer
-  
-  if (currentTimeIntervalId) {
-    clearInterval(currentTimeIntervalId);
-  }
-  let timerElement = document.getElementById('timer');
-  timerElement.style.color = '';
-  let currentTime = startTime;
-
-  // Function to update the timer display
-  function updateTimer() {
-    if (!timerOn) {
-      return;
-    }
-    let min = Math.floor(currentTime / 60);
-    let sec = currentTime % 60;
-    let minString = `${min}`;
-    let secString = `${sec}`;
-    if (sec < 10) {
-      secString = `0${secString}`;
-    }
-    timerElement.textContent = `${minString}:${secString}`;
-
-    if (currentTime <= 10) {
-      timerElement.style.color = 'red';
-    }
-
-    if (currentTime === 0) {
-      endGameLose();
-      timerOn = false;
-      return;
-    }
-
-    currentTime--;
-  }
-  
-  // Start the timer
-  currentTimeIntervalId = setInterval(updateTimer, 1000);
-}
-
-function pauseTimer() {
-  timerOn = false;
-}
-
-function resumeTimer() {
-  timerOn = true;
-}
-
-const modal = document.querySelector("#modal");
-const openModal = document.querySelector("#rules");
-const closeModal = document.querySelector("#close-btn");
-
-// modal functions - timer paused when opened
-openModal.addEventListener("click", () => {
-  modal.classList.toggle("closed");
-  modal.showModal();
-  pauseTimer();
-});
-
-closeModal.addEventListener("click", () => {
-  modal.close();
-  modal.classList.toggle("closed");
-  resumeTimer();
-});
-
-window.onload = function() {
-  document.getElementById("modal").showModal();
+soundButton.onclick = function(e) {
+  playSound = playSound ? false : true;
+  this.innerHTML = this.innerHTML === '<i class="fa-solid fa-volume-high"></i>' ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
 };
