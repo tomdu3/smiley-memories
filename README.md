@@ -2,7 +2,7 @@
 
 # Smiley's Memories
 
-![Smileys Memories Responsiveness](assets/readme-files/responsive-site.PNG)
+![Smileys Memories Responsiveness](assets/readme-files/responsive-site.png)
 
 [View the live project here](https://tomdu3.github.io/smiley-memories/)
 
@@ -88,8 +88,51 @@ Strategy incorporates user needs as well as product objectives. This website wil
     - Personality/Attitudes:
         - Focused
         - Relaxed
-        
-        
+
+The website is supposed to enable the **user** to:
+- play the memory game in different difficulties:
+  - Difficulty levels are easy, moderate and hard, and they consist in the combination of the number of cards and the time in which all the pairs need to be found:
+    - easy - 12 cards, 30 sec;
+    - moderate - 20 cards, 60 sec;
+    - hard - 30 cards, 90 sec.
+  - change the background on the homepage:
+    - Page themes are  paper, flags, chalkboard and plaid.
+  - generate a new card field on each new game start:
+    - Randomly generated card positions using an algorithm
+    
+Taking all into consideration, the following strategy table shows the corrispondence of importance and viablity.
+
+
+<details>
+<summary>Strategy Plane - Viability/Feasibility Table</summary>
+
+![Strategy Table](assets/readme_files/strategy_table.png)
+
+</details>
+
+
+#### Scope
+The scope plane defines requirements based on the goals established on the strategy plane. So, accordingly , the identified required features are broken into the following categories:
+- Content Requirements:
+  - The user will be looking for:
+    - clear and concise instructions.
+    - choice of difficulty  layouts; easy, moderate, and hard.
+    - choice of page background; paper, flags, chalkboard and plaid.
+- Functionality Requirements:
+  - The user will be able to:
+    - easily navigate the site to find the play instructions (rules).
+    - choose the preferences of the game difficulty and background.
+
+#### Structure
+The above mentioned information  were  organized in a site map, showing how users can navigate through the site with ease and efficiency:
+
+
+<details>
+<summary>Site Map</summary>
+
+![Site Map](assets/readme_files/sitemap.png)
+
+</details>
         
         
       ## Gitpod Reminders
