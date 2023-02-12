@@ -640,7 +640,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 
 
 ## User testing 
-Some of my friends, my mentor and a few colleagues from the CI Slack community helped me tested this application. With some of their usefull hints, there were made  some changes to the overall look of the web site.
+Some of my friends, my mentor and a few colleagues from the CI Slack community helped me test this application. With some of their usefull hints, some changes were made to the overall look of the web site.
 
 
 ## Deployment
