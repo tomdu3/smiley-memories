@@ -509,7 +509,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 </details>
 
 <details>
-<summary>Rules Page HTML Validation Final Results</summary>
+<summary>About Page HTML Validation Final Results</summary>
 
 ![About Page HTML Validation Final Results](./assets/readme_files/validation/about-validation-final.jpg)
 
@@ -620,6 +620,7 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 - Regarding the results of the Accessibility, the issues that are reported are related to the design itself.
     - *Buttons do not have an accessible name* - Sound button has only a Font Awesome Icon, instead of an accessible name.
     - *Form elements do not have associated labels* - It's the same issue, as the previous one. Level selection labels are only Font Awesome Icons.
+    The Developer decided to leave these issues unaddressed. The reason to use only symbols rather than words was to give a user a usual feeling of the game. 
 
 - About Page Lighthouse Validation
 
@@ -640,9 +641,6 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 </details>
 
 
-
-
-
 ## User testing 
 Some of my friends, my mentor and a few colleagues from the CI Slack community helped me tested this application. With some of their usefull hints, there were made  some changes to the overall look of the web site.
 
@@ -659,8 +657,41 @@ This project was developed using [GitPod](https://www.gitpod.io/ "Link to GitPod
 
 The live link can be found here - https://tomdu3.github.io/smiley-memories/.
 
+
 ## Credits 
 
 ### Content
+- Text for the About Page was taken and adapted from [Board Games Galore Fandom](https://board-games-galore.fandom.com/wiki/Memory)
+
+### Media
+**Images**
+
+- The favicon image is taken from [Favicon](https://favicon.io/emoji-favicons/face-with-rolling-eyes/).
+- The card images are credited to Christian Dorn and taken from [Pixabay](https://pixabay.com/).
+- The image of the original Memory Game is taken from [Reddit](https://www.reddit.com/r/nostalgia/comments/hu50gp/the_original_memory_game/)
+- The image for the 404 Page is credited to Andre Hunter and taken from [Unsplash](https://unsplash.com/photos/vm2cwMEiUFA)
+- The background images are taken from [The Pattern Library](http://thepatternlibrary.com/).
+ 
+**Sound Files**
+- Sound effects were taken from [Freesound](https://freesound.org/)
+
+### Code 
+The developer consulted multiple sites to better understand the code they were trying to implement. The following sites were used on a more regular basis:
+- [Stack Overflow](https://stackoverflow.com/ )
+- [W3Schools](https://www.w3schools.com/ )
+- 3d buttons came from [CSS Scan](https://getcssscan.com/css-buttons-examples)
+- Modal window code is designed by adapting the code from Kevin Powel's [Dialog = the easiest way to make a popup modal](https://youtu.be/TAB_v6yBXIE)
+- Flip card code is an adapted version of the one from Coding with Russ YT Channel video  [Easy Flipcard Tutorial | HTML & CSS](https://youtu.be/NCLdf661ILE)
+- Timer code was inspired by the one from Florin Pop's video [Simple Countdown Timer with JavaScript - Day 21](https://youtu.be/x7WJEmxNlEs)
+- For the documentation file structure, the main resource was Rebecca Rayner's GitHub repo [Do You Sudoku](https://github.com/Irishbecky91/Do-you-Sudoku)
+
+[Back to top ⇧](#)
+
+## Acknowledgements
+
+- I would like to thank my closest friends, a selected few, who supported me and tested the site. I was helped with the testing with the kindness of  our CI Slack community. Thank you. 
+- A special thanks to my mentor Koko (Oluwaseun Owonikoko), who was brilliant as always .
+Thanks to Ger Tobin who was giving me good tips everyweek. We'll miss you.
 
 
+[Back to top ⇧](#)
