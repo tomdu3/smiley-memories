@@ -166,9 +166,9 @@ Fonts used on the website are from the [Google Fonts](https://fonts.google.com/)
 
 #### Imagery
 The images are taken from the different sources and are credited in the Credits of this file. The main sources were: 
-	- [Pixabay](https://pixabay.com/) for the front face of the cards,
-	- [Unsplash](https://unsplash.com/) for the image for 404 page.
-	- [The Pattern Library](http://thepatternlibrary.com/) for the background images. 
+- [Pixabay](https://pixabay.com/) for the front face of the cards,
+- [Unsplash](https://unsplash.com/) for the image for 404 page.
+- [The Pattern Library](http://thepatternlibrary.com/) for the background images. 
 
 [Back to top ⇧](#)
 
@@ -217,10 +217,11 @@ features a countdown during the ongoing game.  The time is hard coded and depend
 - **Navigation Bar** - Appears on every page for a consistently easy and intuitive navigable system, except of the 404 page.
 - **Social Media Icons** - Appearing on every page, the icons are appropriate representations of the Social Media platforms, linking users to the developers Instagram, GitHub and Facebook accounts. The icons appear in the centre of the footer.
 - **[Home Page](https://tomdu3.github.io/smiley-memories/index.html "Smiley's Memories")** - Creates a custom Emoji themed Memory Game.
-- **[About Page](https://tomdu3.github.io/smiley-memories/about.html "Smiley's Memories - About Memory Game")** - Informing the user of the rules of playing Sudoku.
+- **[About Page](https://tomdu3.github.io/smiley-memories/about.html "Smiley's Memories - About Memory Game")** - Informing the user of the history of the Memory Game.
 - **[404 Page](https://tomdu3.github.io/smiley-memories/404.html "Smiley's Memories - 404 Page")** - An emoji themed page that appears when there's page loading 404 error .
 - **Sound FX** - The sounds are following the selection, right and wrong guesses, as well as the game won and the game lost event.
 - **End Game** - There are two End Game functions, one for losing, other for winning game. The window appears with the corresponding text and a sound effect.
+- **Rules** - A modal window brings the rules and indications for the game and its functionalities.
 
 ### Features to Implement in the future
 **Limiting allowed attempts**
@@ -271,14 +272,16 @@ The developer first increased the speed of the flip and decreased the time of th
 	- Balsamiq was used to create the wireframes during the design phase of the project.
 - [Am I Responsive?](https://amiresponsive.co.uk/ "Link to Am I Responsive Homepage")
 	- Am I Responsive was used to test responsivenes and generate design for the  mockup imagery used at the beginning of this documentation.
- -  [Beautiful CSS buttons examples](https://getcssscan.com/css-buttons-examples)
+-  [Beautiful CSS buttons examples](https://getcssscan.com/css-buttons-examples)
 	- Beautiful CSS buttons was used for the 3d buttons.
 -  [CSS Gradient](https://cssgradient.io/)
 	- CSS Gradient web app was used to make gradient colour backgrounds.
  - [Webp Converter](https://developers.google.com/speed/webp)
 	 - Webp Converter was used to convert images to WEBP format on GitPod.
-    [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
-	- GIMP was used to resize the 404 Page image.
+- [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
+    - GIMP was used to resize the 404 Page image.
+- [Peek](https://github.com/phw/peek)
+    - Peek was used to make screencasts for the documentation. For some reason, it didn't record the cursor (it's probably a Wayland incompatibility issue).
 
 [Back to top ⇧](#)
 
@@ -326,7 +329,6 @@ Manual testing was conducted on the following elements that appear on every page
 
 </details>
 
-<br>
 
 - Hovering over the Navigation bar elements will trigger the `hover` effect, highlighting the icon for the user.
 
@@ -337,11 +339,10 @@ Manual testing was conducted on the following elements that appear on every page
 
 </details>
      
-<br>
  
 - Clicking on the Social Media links will open a new tab
 
- Instagram:
+ - Instagram
 
 <details>
 <summary>Instagram Social Media link</summary>
@@ -350,9 +351,8 @@ Manual testing was conducted on the following elements that appear on every page
 
 </details>
 
-<br>
 
-- GitHub:
+- GitHub
 
 <details>
 <summary>GitHub Social Media link</summary>
@@ -361,9 +361,8 @@ Manual testing was conducted on the following elements that appear on every page
 
 </details>
 
-<br>
 
-- Facebook:
+- Facebook
 
 <details>
 <summary>Facebook Social Media link</summary>
@@ -372,7 +371,6 @@ Manual testing was conducted on the following elements that appear on every page
 
 </details>
 
-<br>
 
 ### Home Page
 Manual testing was conducted on the following elements of the [Home Page](https://tomdu3.github.io/smiley-memories/):
@@ -447,12 +445,12 @@ Manual testing was conducted on the following elements of the [Home Page](https:
 ### Responsiveness
 Manual testing was conducted on all three site pages for responsiveness:
 
-- Responsivenss of Home Page.
+- Responsiveness of Home Page.
 
 <details>
 <summary>Resposiveness - Home Page</summary>
 
-![Resposiveness - Home Page](./assets/readme_files/testing/home-responsiveness.gif)
+![Resposiveness - Home Page](./assets/readme_files/testing/homepage-responsiveness.gif)
 
 </details>
      
@@ -689,9 +687,9 @@ The developer consulted multiple sites to better understand the code they were t
 
 ## Acknowledgements
 
-- I would like to thank my closest friends, a selected few, who supported me and tested the site. I was helped with the testing with the kindness of  our CI Slack community. Thank you. 
+- I would like to thank my closest friends, a selected few, who supported me and tested the site. Our CI Slack community offered a very kind help in testing. Thank you. 
 - A special thanks to my mentor Koko (Oluwaseun Owonikoko), who was brilliant as always .
-Thanks to Ger Tobin who was giving me good tips everyweek. We'll miss you.
+- Thanks to Ger Tobin who was giving me good tips everyweek. We'll miss you.
 
 
 [Back to top ⇧](#)
