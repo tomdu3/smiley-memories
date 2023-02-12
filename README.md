@@ -2,40 +2,39 @@
 
 # Smiley's Memories
 
-![Smileys Memories Responsiveness](assets/readme-files/responsive-site.png)
+![Smileys Memories Responsiveness](./assets/readme-files/responsive-site.png)
 
 [View the live project here](https://tomdu3.github.io/smiley-memories/)
 
 ## Table of contents
-1. [Introduction](#Introduction)
-2. [UX](#UX)
-    1. [Ideal User Demographic](#Ideal-User-Demographic)
-    2. [User Stories](#User-Stories)
-    3. [Development Planes](#Development-Planes)
-    4. [Design](#Design)
-3. [Features](#Features)
-    1. [Design Features](#Design-Features) 
-    2. [Existing Features](#Existing-Features)
-    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
-4. [Issues and Bugs](#Issues-and-Bugs)
-5. [Technologies Used](#Technologies-Used)
-    1. [Main Languages Used](#Main-Languages-Used)
-    3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
-6. [Testing](#Testing)
-    1. [Testing User Stories](#Testing-User-Stories)
-    2. [Manual Testing](#Manual-Testing)
-    3. [Automated Testing](#Automated-Testing) 
-        - [Code Validation](#Code-Validation)
-        - [Browser Validation](#Browser-Validation)
-    4. [User Testing](#User-Testing)
-7. [Deployment](#Deployment)
-    1. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
-8. [Credits](#Credits)
-    1. [Content](#Content)
-    2. [Media](#Media)
-    3. [Code](#Code)
-9. [Acknowledgements](#Acknowledgements)
-***
+1. [Introduction](#introduction)
+2. [UX](#ux)
+    1. [Ideal User Demographic](#ideal-user-demographic)
+    2. [User Stories](#user-stories)
+    3. [Development Planes](#development-planes)
+    4. [Design](#design)
+3. [Features](#features)
+    1. [Design Features](#design-deatures) 
+    2. [Existing Features](#existing-features)
+    3. [Features to Implement in the future](#deatures-to-implement-in-the-future)
+4. [Issues and Bugs](#issues-and-bugs)
+5. [Technologies Used](#technologies-used)
+    1. [Main Languages Used](#main-languages-used)
+    3. [Frameworks, Libraries & Programs Used](#frameworks,-libraries-&-programs-used)
+6. [Testing](#testing)
+    1. [Testing User Stories](#testing-user-stories)
+    2. [Manual Testing](#manual-testing)
+    3. [Automated Testing](#automated-testing) 
+        - [Code Validation](#code-validation)
+        - [Browser Validation](#browser-validation)
+    4. [User Testing](#user-testing)
+7. [Deployment](#deployment)
+    1. [Deploying on GitHub Pages](#deploying-on-github-pages)
+8. [Credits](#credits)
+    1. [Content](#content)
+    2. [Media](#media)
+    3. [Code](#code)
+9. [Acknowledgements](#acknowledgements)
 
 
 ## Introduction
@@ -61,7 +60,7 @@ The ideal user for this website is:
 2. As a new user, I want the instructions to be easily found, clear and concise.
 3. As a new user, I want attractive and relevant visuals and colour schemes that work with the content.
 4. As a new user, I want to find sound effects accompanying playing of the game and a possibility  to switch the sound on/off.
-4. As a new user, I want to find out something interesting.
+5. As a new user, I want to find out something interesting.
 
 #### Current User
 1. As a current user, I want to have different difficulty options, to challenge myself.
@@ -431,3 +430,20 @@ Manual testing was conducted on all three site pages for responsiveness:
 </details>
      
 [Back to top ⇧](#)
+## Deployment
+
+This project was developed using [GitPod](https://www.gitpod.io/ "Link to GitPod Site"), which was then committed and pushed to GitHub from the terminal.
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the **Settings** tab 
+  - From the left side menu select **Pages**.
+  - From the source section drop-down menu, select the **main** branch and click on **save**.
+  - Once the main branch has been selected and saved, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - https://tomdu3.github.io/smiley-memories/.
+
+## Credits 
+
+### Content
+
+
