@@ -427,7 +427,7 @@ Manual testing was conducted on the following elements of the [Home Page](https:
 <details>
 <summary>Sound Button - Home Page</summary>
 
-![Modal- Home Page](./assets/readme_files/testing/sound-button.gif)
+![Sound Button - Home Page](./assets/readme_files/testing/sound-button.gif)
 
 </details>
 
@@ -438,7 +438,7 @@ Manual testing was conducted on the following elements of the [Home Page](https:
 <details>
 <summary>Background Change Button - Home Page</summary>
 
-![Modal- Home Page](./assets/readme_files/testing/background-button.gif)
+![Background Change Button - Home Page](./assets/readme_files/testing/background-button.gif)
 
 </details>
 
@@ -452,7 +452,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 <details>
 <summary>Resposiveness - Home Page</summary>
 
-![Resposiveness - Home Page](./assets/readme_files/testing/home-responsive.gif)
+![Resposiveness - Home Page](./assets/readme_files/testing/home-responsiveness.gif)
 
 </details>
      
@@ -461,7 +461,7 @@ Manual testing was conducted on all three site pages for responsiveness:
 <details>
 <summary>Resposiveness - About Page</summary>
 
-![Resposiveness - About Page](./assets/readme_files/testing/about-responsive.gif)
+![Resposiveness - About Page](./assets/readme_files/testing/about-responsiveness.gif)
 
 </details>
 
@@ -470,11 +470,183 @@ Manual testing was conducted on all three site pages for responsiveness:
 <details>
 <summary>Resposiveness - 404 Page</summary>
 
-![Resposiveness - 404 Page](./assets/readme_files/testing/404-responsive.gif)
+![Resposiveness - 404 Page](./assets/readme_files/testing/404-responsiveness.gif)
 
 </details>
      
 [Back to top ⇧](#)
+
+## Automated Testing
+
+### Code Validation
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the `HTML` and `CSS` code used. The [JSHint JavaScript Code Quality Tool](https://jshint.com/) was also used to validate the sites `JS` code.
+
+**Results:**
+
+- Home Page
+
+<details>
+<summary>Home Page HTML Validation First Results</summary>
+
+![Home Page HTML Validation First Results](./assets/readme_files/validation/index-validation-1.jpg)
+
+</details>
+
+<details>
+<summary>Home Page HTML Validation Final Results</summary>
+
+![Home Page HTML Validation Final Results](./assets/readme_files/validation/index-validation-final.jpg)
+
+</details>
+
+- About Page
+
+<details>
+<summary>About Page HTML Validation First Results</summary>
+
+![About Page HTML Validation First Results](./assets/readme_files/validation/about-validation-1.jpg)
+
+</details>
+
+<details>
+<summary>Rules Page HTML Validation Final Results</summary>
+
+![About Page HTML Validation Final Results](./assets/readme_files/validation/about-validation-final.jpg)
+
+</details>
+
+- 404 Page
+
+<details>
+<summary>404 Page HTML Validation Results</summary>
+
+![404 Page HTML Validation Results](./assets/readme_files/validation/404-validation.png)
+
+</details>
+
+- CSS Stylesheet
+
+<details>
+<summary>Style Sheet Validation First Results</summary>
+
+![Style Sheet Validation First results](./assets/readme_files/validation/css-validation-1.png)
+
+</details>
+
+<details>
+<summary>Style Sheet Validation Final Results</summary>
+
+![Style sheet Validation results](./assets/readme_files/validation/css-validation-final.png)
+
+</details>
+
+- JavaScript 
+
+<details>
+<summary>JavaScript Validation First Results</summary>
+
+![JavaScript Validation results](./assets/readme_files/validation/js-validation-1.png)
+
+</details>
+
+<details>
+<summary>JavaScript Validation Final Results</summary>
+
+![JavaScript Validation Final Results](./assets/readme_files/validation/js-validation-final.png)
+
+</details>
+
+### Browser Validation
+- Google Chrome
+
+<details>
+<summary>Google Chrome Validation </summary>
+
+![Google Chrome Test Image](./assets/readme_files/validation/validation-chrome.png)
+
+</details>
+
+
+- Firefox
+
+<details>
+<summary>Firefox Validation </summary>
+
+![Firefox Test Image](./assets/readme_files/validation/validation-firefox.png)
+
+</details>
+
+
+- Brave
+
+<details>
+<summary>Brave Validation </summary>
+
+![Brave Test Image](./assets/readme_files/validation/validation-brave.png)
+
+</details>
+
+
+- MS Edge
+
+<details>
+<summary>MS Edge Validation </summary>
+
+![MS Edge Test Image](./assets/readme_files/validation/validation-edge.png)
+
+</details>
+
+- Vivaldi
+
+<details>
+<summary>Vivaldi Validation </summary>
+
+![Vivaldi Test Image](./assets/readme_files/validation/validation-vivaldi.png)
+
+</details>
+
+
+### Lighthouse Validation
+
+- Home Page Lighthouse Validation
+
+<details>
+<summary>Home Page Lighthouse Validation</summary>
+
+![Home Page Lighthouse Validation](./assets/readme_files/validation/lighthouse-homepage.png)
+
+</details>
+
+- Regarding the results of the Accessibility, the issues that are reported are related to the design itself.
+    - *Buttons do not have an accessible name* - Sound button has only a Font Awesome Icon, instead of an accessible name.
+    - *Form elements do not have associated labels* - It's the same issue, as the previous one. Level selection labels are only Font Awesome Icons.
+
+- About Page Lighthouse Validation
+
+<details>
+<summary>About Page Lighthouse Validation</summary>
+
+![About Page Lighthouse Validation](./assets/readme_files/validation/lighthouse-about.png)
+
+</details>
+
+- 404 Page Lighthouse Validation
+
+<details>
+<summary>404 Page Lighthouse Validation</summary>
+
+![404 Page Lighthouse Validation](./assets/readme_files/validation/lighthouse-404.png)
+
+</details>
+
+
+
+
+
+## User testing 
+Some of my friends, my mentor and a few colleagues from the CI Slack community helped me tested this application. With some of their usefull hints, there were made  some changes to the overall look of the web site.
+
+
 ## Deployment
 
 This project was developed using [GitPod](https://www.gitpod.io/ "Link to GitPod Site"), which was then committed and pushed to GitHub from the terminal.
