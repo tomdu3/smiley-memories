@@ -818,7 +818,6 @@ footer>* {
     --card-size: 45px;
   }
 
-  .modal,
   #game-over {
     position: absolute;
     top: 60%;
@@ -826,6 +825,9 @@ footer>* {
   }
 
   .modal {
+    position: absolute;
+    top: 60%;
+    left: 50%;
     width: 90%;
     font-size: 0.8rem;
   }
