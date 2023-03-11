@@ -257,7 +257,29 @@ fieldset {
 }
 
 /* modal */
-.modal,
+#modal {
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid var(--purple-blue);
+  color: var(--purple-blue);
+  background: rgb(226, 220, 200);
+  background: linear-gradient(45deg, rgba(226, 220, 200, 0.8491771708683473) 39%, rgba(250, 173, 46, 1) 86%);
+  text-align: center;
+}
+
+#close-btn {
+  height: 2rem;
+  width: 10%;
+  margin: auto auto;
+  text-align: center;
+  padding: 0;
+}
+
+.modal.closed {
+  display: none;
+}
+
 #game-over {
   display: flex;
   font-size: 1.2rem;
@@ -272,16 +294,6 @@ fieldset {
 
 }
 
-#close-btn {
-  height: 2rem;
-  width: 10%;
-  margin: auto auto;
-  padding: 0;
-}
-
-.modal.closed {
-  display: none;
-}
 
 /* Section on About Page */
 section {
@@ -657,6 +669,7 @@ footer>* {
   #memory-img {
     width: 200px;
   }
+
   footer {
     position: relative;
   }
