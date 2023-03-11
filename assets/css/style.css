@@ -257,7 +257,7 @@ fieldset {
 }
 
 /* modal */
-#modal {
+.modal {
   font-size: 1.2rem;
   width: 50%;
   border-radius: 25px;
@@ -266,6 +266,14 @@ fieldset {
   background: rgb(226, 220, 200);
   background: linear-gradient(45deg, rgba(226, 220, 200, 0.8491771708683473) 39%, rgba(250, 173, 46, 1) 86%);
   text-align: center;
+}
+
+.modal p {
+  font-size: 1.2rem;
+}
+
+.modal h1 {
+  font-size: 1.6rem;
 }
 
 #close-btn {
@@ -728,7 +736,7 @@ footer>* {
   }
 
   .modal {
-    width: 90%;
+    width: 80%;
     font-size: 1rem;
   }
 
@@ -826,9 +834,7 @@ footer>* {
 
   .modal {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 90%;
+    width: 80%;
     font-size: 0.8rem;
   }
 
