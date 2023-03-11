@@ -732,8 +732,12 @@ footer>* {
     font-size: 0.8rem;
   }
 
-  .modal h1 {
+  .modal p {
     font-size: 0.8rem;
+  }
+
+  .modal h1 {
+    font-size: 1.2rem;
   }
 
   .choice {
@@ -814,9 +818,9 @@ footer>* {
     --card-size: 45px;
   }
 
+  .modal,
   #game-over {
     position: absolute;
-    font-size: 1rem;
     top: 60%;
     left: 50%;
   }
