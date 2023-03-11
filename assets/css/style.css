@@ -728,7 +728,7 @@ footer>* {
   }
 
   .modal {
-    width: 50%;
+    width: 80%;
     font-size: 0.8rem;
   }
 
@@ -792,5 +792,21 @@ footer>* {
 @media (max-height: 600px) {
   footer {
     position: relative;
+  }
+}
+
+/* even smaller screens */
+@media (max-width: 375px) {
+
+  #small {
+    --card-size: 70px;
+  }
+
+  #medium {
+    --card-size: 55px;
+  }
+
+  #big {
+    --card-size: 45px;
   }
 }
