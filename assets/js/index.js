@@ -174,7 +174,9 @@ function endGameWin() {
     return;
   }
   let gameOver = document.querySelector("#game-over");
-  yeahSound.play();
+  if (playSound) {
+    yeahSound.play();
+  }
   gameOver.innerHTML = `
   <h1>You've won!!!</h1>
   <p>Congratulations! Hit <strong>(New Game)</strong> to play again!</p>`;
@@ -187,10 +189,12 @@ function endGameLose() {
   generateField(4, 5);
   document.querySelector('.memory-field').setAttribute('id', 'medium');
   let gameOver = document.querySelector("#game-over");
+  if (playSound) {
+    owSound.play();
+  }
   gameOver.innerHTML = `
   <h1>You've lost!</h1>
   <p>Sorry! Hit <strong>(New Game)</strong> and practice more!</p>`;
-  owSound.play();
   gameOver.style.display = "unset";
 }
 
