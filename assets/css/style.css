@@ -728,7 +728,11 @@ footer>* {
   }
 
   .modal {
-    width: 80%;
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  .modal h1 {
     font-size: 0.8rem;
   }
 
@@ -808,5 +812,12 @@ footer>* {
 
   #big {
     --card-size: 45px;
+  }
+
+  #game-over {
+    position: absolute;
+    font-size: 1rem;
+    top: 60%;
+    left: 50%;
   }
 }
