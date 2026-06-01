@@ -10,6 +10,7 @@ let startTime;
 let possibleSolutions; // control array for the solutions
 let timerOn = true;
 let alreadyPlayed;
+let currentCardClickHandler = null;
 
 // generate field of cards of the size rows x columns
 function generateField(rows, columns) {
@@ -99,7 +100,13 @@ function gameOn(numberRows, numberColumns) {
 
   let firstCard = null;
   possibleSolutions = (numberRows * numberColumns) / 2;
-  document.body.addEventListener("click", function(e) {
+
+  let memoryField = document.querySelector(".memory-field");
+  if (currentCardClickHandler) {
+    memoryField.removeEventListener("click", currentCardClickHandler);
+  }
+
+  currentCardClickHandler = function(e) {
     let tempFirstCard, tempCard;
     for (let cardDiv of cardDivs) {
       if (cardDiv.contains(e.target)) {
@@ -165,7 +172,9 @@ function gameOn(numberRows, numberColumns) {
       alreadyPlayed = true;
       return;
     }
-  });
+  };
+
+  memoryField.addEventListener("click", currentCardClickHandler);
 }
 
 // end game as winner function

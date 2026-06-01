@@ -10,8 +10,9 @@ function timer() {
   }
   let timerElement = document.getElementById('timer');
 
-  // reset colour
+  // reset colour and pulse
   timerElement.style.color = '';
+  timerElement.parentElement.classList.remove('timer-pulse');
   let currentTime = startTime;
 
   // Function to update the timer display
@@ -32,9 +33,12 @@ function timer() {
     }
     timerElement.textContent = `${minString}:${secString}`;
 
-    // timer colour turns to red when below or equal to 10
+    // timer colour turns to red and pulses when below or equal to 10
     if (currentTime <= 10) {
-      timerElement.style.color = 'red';
+      timerElement.style.color = '#ef4444';
+      timerElement.parentElement.classList.add('timer-pulse');
+    } else {
+      timerElement.parentElement.classList.remove('timer-pulse');
     }
     // if time is up, end game losing
     if (currentTime === 0) {
