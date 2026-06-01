@@ -15,6 +15,11 @@
 </head>
 
 <body>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
   <header>
     <!-- navbar slightly followed and adapted from https://github.com/WebDevSimplified/css-tutorials/tree/master/Responsive%20Navbar -->
     <nav class="navbar">
@@ -40,15 +45,15 @@
         <legend>Select Level: </legend>
         <div>
           <input type="radio" id="easy" name="level" value="easy" checked>
-          <label for="easy"><i class="fa-regular fa-face-smile-beam"></i><span></span></label>
+          <label for="easy"><i class="fa-regular fa-face-smile-beam"></i> <span>Easy</span></label>
         </div>
         <div>
           <input type="radio" id="moderate" name="level" value="moderate">
-          <label for="moderate"><i class="fa-regular fa-face-grin-beam-sweat"></i><span></span></label>
+          <label for="moderate"><i class="fa-regular fa-face-grin-beam-sweat"></i> <span>Medium</span></label>
         </div>
         <div>
           <input type="radio" id="hard" name="level" value="hard">
-          <label for="hard"><i class="fa-regular fa-face-angry"></i><span></span></label>
+          <label for="hard"><i class="fa-regular fa-face-angry"></i> <span>Hard</span></label>
         </div>
       </fieldset>
     </div>
@@ -82,22 +87,22 @@
     <!-- Radio buttons to change backgrounds -->
     <div class="back-image">
       <fieldset>
-        <legend>Change background:</legend>
+        <legend>Change Theme:</legend>
         <div>
-          <input type="radio" id="rough-paper" name="back" value="rough-paper" checked>
-          <label for="rough-paper">Paper</label>
+          <input type="radio" id="theme-aurora" name="back" value="theme-aurora" checked>
+          <label for="theme-aurora">Aurora</label>
         </div>
         <div>
-          <input type="radio" id="cycles" name="back" value="cycles">
-          <label for="cycles">Cycles</label>
+          <input type="radio" id="theme-neon" name="back" value="theme-neon">
+          <label for="theme-neon">Midnight</label>
         </div>
         <div>
-          <input type="radio" id="chalkboard" name="back" value="chalkboard">
-          <label for="chalkboard">Chalkboard</label>
+          <input type="radio" id="theme-warm" name="back" value="theme-warm">
+          <label for="theme-warm">Warm</label>
         </div>
         <div>
-          <input type="radio" id="plaid" name="back" value="plaid">
-          <label for="plaid">Plaid</label>
+          <input type="radio" id="theme-forest" name="back" value="theme-forest">
+          <label for="theme-forest">Forest</label>
         </div>
       </fieldset>
     </div>
