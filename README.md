@@ -17,6 +17,7 @@
     1. [Design Features](#design-features) 
     2. [Existing Features](#existing-features)
     3. [Features to Implement in the future](#features-to-implement-in-the-future)
+    4. [New Features](#new-features)
 4. [Issues and Bugs](#issues-and-bugs)
 5. [Technologies Used](#technologies-used)
     1. [Main Languages Used](#main-languages-used)
@@ -233,6 +234,29 @@ features a countdown during the ongoing game.  The time is hard coded and depend
 - **Reason for not featuring in this release** - This would require more expertise and knowledge from the developer, that is outside the requested parameters of this project. The other reason is the lack of time.
 
 
+### New Features
+
+**Animated Aurora Mesh Backgrounds**
+- Modernized the game environment with smooth, GPU-accelerated background gradients. Three glassmorphic color spheres slowly float and morph in the background, creating a responsive, premium atmosphere that updates on theme change.
+
+**Premium Color Themes**
+- Replaced the tiled repeating background images with four sleek, modern theme choices:
+  - *Aurora Mist (Dark)*: Sleek dark theme with indigo/pink animated gradient blurs.
+  - *Midnight Neon (Dark)*: High-contrast cyber neon layout featuring purple and cyan glows.
+  - *Warm Amber (Light)*: Soft light-mode design with warm cream, amber, and rose gradients.
+  - *Deep Forest (Dark)*: Executive dark green theme with emerald and amber accents.
+
+**Interactive Level & Theme Selectors**
+- Overhauled standard radio button interfaces into modern "chip" selectors that scale and glow dynamically when checked.
+- Added explicit text labels ("Easy", "Medium", "Hard") inside the level chips to optimize accessibility and user experience.
+
+**3D Card Deck with Elastic Motion**
+- Redesigned card structures with glassmorphism overlays and an integrated FontAwesome smiley emblem on the face-down side.
+- Enhanced the 3D card rotation using a custom cubic-bezier elastic curve (`cubic-bezier(0.175, 0.885, 0.32, 1.275)`) that gives flipped cards a satisfying physical bounce.
+
+**Low-Time Visual Alarm**
+- Integrated a heartbeat pulsing alert on the timer panel. When the remaining game time falls below 10 seconds, the timer container turns red and pulses continuously.
+
 [Back to top ⇧](#)
 
 
@@ -247,6 +271,14 @@ The developer first increased the speed of the flip and decreased the time of th
 **End Game Lose Bugs** - A bug was detected that caused an impossibility to end game by losing if non of the cards were selected.  The first bug waited for the user to click at least one card before ending the game, even if the timer was long at 0. The other bug appeared when the game was lost, and was ended, but the unflipped cards were still clickable. Thus, despite the fact the game was over,  the user could still play. The developer sorted out these bugs by creating a new unplayable field upon the timer reaching 0, so the end of game by losing would be declared and the game couldn't be played until the new game started.
 
 **Timer not stopping after Game Ending Bug** - A bug was detected which allowed timer to continu decrease after the game was over. The developer solved this issue by declearing the time variable outside the timer function, thus allowing the timer to be stopped at any moment (e.g. this functionality was also needed in order to pause the timer upon opening modal window during the active game). 
+
+**Duplicate Click Event Listener Stacking Bug**
+- A bug was discovered where starting a new game repeatedly stacked click event listeners on the `document.body` DOM element. Since old listeners were never detached, playing the game after multiple restarts caused card clicks to fire multiple times, leading to visual flip glitches, double audio playbacks, and instant win/lose condition triggers.
+- **Solution**: Refactored the JS click handler scoping in `assets/js/index.js` to track `currentCardClickHandler` at the top level. Before launching a new game inside `gameOn()`, any existing event listener is cleanly detached from the `.memory-field` container, and the click target was narrowed to the memory field itself rather than the entire `body`.
+
+**Flipped Card Face-Down Bleed-Through Bug**
+- On certain web browsers and rendering engines, the pseudo-element smiley cover (`.front::before`) on the face-down card was not properly hidden when the card was flipped over to face-up due to a rendering bleed-through.
+- **Solution**: Added CSS visibility toggles in `assets/css/style.css` matching the `.toggleCard` class. During the midpoint of rotation (when the card is edge-on), the `.front` (face down cover) is set to `opacity: 0` and `visibility: hidden` while the `.back` (face up image) is toggled to `opacity: 1` and `visibility: visible`.
 
 [Back to top ⇧](#)
 
