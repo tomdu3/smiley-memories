@@ -606,6 +606,7 @@ body.theme-warm .modal {
   margin-bottom: 16px;
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -665,6 +666,7 @@ body.theme-warm #game-over {
   font-weight: 800;
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: win-pulse 1s infinite alternate;
 }
@@ -699,6 +701,7 @@ section.history h1 {
   font-weight: 800;
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 10px;
 }
